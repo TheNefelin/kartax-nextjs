@@ -1,0 +1,28 @@
+.navBtn {
+  cursor: pointer;
+  display: none;
+  padding-right: 2rem;
+}
+
+.navBarA, .navBarB, .navBarC {
+  width: 2rem;
+  height: 5px;
+  background-color: var(--colorBase02);
+  border-radius: 4px;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.navBar-btn_click .navBarA {
+  transform: translateY(11px) rotate(45deg);
+  background-color: var(--color03);
+}
+
+.navBar-btn_click .navBarB {
+  opacity: 0;
+}
+
+.navBar-btn_click .navBarC {
+  transform: translateY(-11px) rotate(-45deg);
+  background-color: var(--color03);
+}
