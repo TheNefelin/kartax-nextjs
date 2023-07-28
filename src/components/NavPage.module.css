@@ -1,13 +1,26 @@
 .nav {
     background-color: var(--colorBase04);
+    background: linear-gradient(45deg, var(--colorBase04), var(--colorBase01));
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 4rem;
     padding: 2rem;
+    border-bottom: solid 1px var(--colorBase07);
 }
 
 .logo {
     display: flex;
     align-items: center;
+    gap: 1rem;
+    color: var(--colorBase07);
+    font-size: 1.5rem;
+    text-shadow: 0 0 3px var(--colorBase01), 0 0 5px var(--colorBase01);
+    animation: colores 15s infinite;
+}
+
+@keyframes colores {
+    0%   {color: var(--colorBase07);}
+    50%  {color: var(--colorBase02);}
+    100% {color: var(--colorBase07);}
 }

@@ -21,6 +21,7 @@
 }
 
 .login_input {
+	color: var(--colorBase02);;
 	border: none;
 	border-bottom: 2px solid var(--colorBase02);
 	background: none;
