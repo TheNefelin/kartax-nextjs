@@ -8,9 +8,9 @@
 	display: grid;
 	gap: 2rem;
 	padding: 2rem 1rem;
-	background-color: var(--colorBase04);
-	/* background: linear-gradient(135deg, var(--colorBase04), var(--colorBase01));	 */
-	box-shadow: 0px 0px 15px var(--colorBase09);
+	/* background-color: var(--colorBase04); */
+	background: linear-gradient(135deg, var(--colorBase09), var(--colorBase01));	
+	box-shadow: 0px 0px 15px var(--colorBase01);
 }
 
 .login_close {

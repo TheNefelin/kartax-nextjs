@@ -11,7 +11,7 @@ import Login from '@/components/Login'
 export default function Home() {
   return (
     <main>
-      <Image className={styles.background} src={img}/>
+      {/* <Image className={styles.background} src={img}/> */}
       <Link className={style_link.link} href={"https://www.google.cl"} target='_blanck'>CLICK</Link>
       <Login></Login>
       {/* <div className={styles.icons}>

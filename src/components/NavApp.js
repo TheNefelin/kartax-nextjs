@@ -1,11 +1,10 @@
 import styles from "./navApp.module.css"
 import Image from "next/image"
 
-import logo from "@/assets/imgApp/logo.png"
-
+import logo from "@/img/imgApp/logo.png"
 export default function NavApp() {
   return (
-    <nav>
+    <div>
       <section class="navBar-contenedor">
         <a href="/" class="navBar-logo">
           <Image
@@ -27,6 +26,6 @@ export default function NavApp() {
           <a href="/encuesta">Encuesta</a>
         </div>
       </section>
-    </nav>
+    </div>
   )
 }
