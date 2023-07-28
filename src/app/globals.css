@@ -7,6 +7,7 @@
   --colorBase06: rgb(190, 0, 29);   /*color02*/
   --colorBase07: rgb(252, 161, 32); /*color03*/
   --colorBase08: rgb(0, 255, 255);  /*color04*/
+  --colorBase09: rgb(235, 235, 235);
 }
 
 * {
@@ -24,8 +25,4 @@ body {
 a {
   text-decoration: none;
   color: inherit
-}
-
-Links {
-  color: red;
 }
