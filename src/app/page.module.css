@@ -17,3 +17,7 @@
 .link:hover::after {
   transform: scaleX(1);
 }
+
+.icons {
+  width: 25px;
+}
