@@ -1,4 +1,4 @@
-import styles from "./burgerBtn.module.css"
+import styles from "@/components/BurgerBtn.module.css"
 
 export default function burgerBtn(props) {
   const classA = props.isClick ? `${styles.burgerBtnClick} ${styles.burgerA}` : styles.burgerA 
