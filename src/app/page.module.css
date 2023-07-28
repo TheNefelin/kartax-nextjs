@@ -1,23 +1,8 @@
-.link {
-  display: inline-block;
-  /* padding: 10px; */
-}
-
-.link::after {
-  content: "";
-  display: block;
-  height: 4px;
-  width: 100%;
-  background-color: var(--colorBase07);
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 0.3s ease;
-}
-
-.link:hover::after {
-  transform: scaleX(1);
-}
-
 .icons {
   width: 25px;
+}
+
+.background {
+  position: fixed;
+  z-index: -1;
 }

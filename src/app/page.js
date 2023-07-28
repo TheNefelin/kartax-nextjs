@@ -1,15 +1,18 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import styles from './page.module.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome' 
-import { faUser, faUsers , faKey, faLock, faCartArrowDown, faCreditCard, faRightFromBracket, faCashRegister, faScrewdriverWrench, faDragon, faSkull } from '@fortawesome/free-solid-svg-icons'
+import style_link from '@/components/LinkA.module.css'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome' 
+// import { faUser, faUsers , faKey, faLock, faCartArrowDown, faCreditCard, faRightFromBracket, faCashRegister, faScrewdriverWrench, faDragon, faSkull } from '@fortawesome/free-solid-svg-icons'
 
+import img from "@/img/imgApp/backgound_01.jpg"
 import Login from '@/components/Login'
 
 export default function Home() {
   return (
     <main>
-      HOLA
-      <Link className={styles.link} href={"https://www.google.cl"} target='_blanck'>CLICK</Link>
+      <Image className={styles.background} src={img}/>
+      <Link className={style_link.link} href={"https://www.google.cl"} target='_blanck'>CLICK</Link>
       <Login></Login>
       {/* <div className={styles.icons}>
         <FontAwesomeIcon icon={faUser} color='blue'/>

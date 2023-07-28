@@ -7,7 +7,7 @@
   --colorBase06: rgb(190, 0, 29);   /*color02*/
   --colorBase07: rgb(252, 161, 32); /*color03*/
   --colorBase08: rgb(0, 255, 255);  /*color04*/
-  --colorBase09: rgb(235, 235, 235);
+  --colorBase09: rgba(255, 255, 255, 0.466);
 }
 
 * {
