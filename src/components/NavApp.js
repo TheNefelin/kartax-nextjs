@@ -2,6 +2,7 @@ import styles from "./navApp.module.css"
 import Image from "next/image"
 
 import logo from "@/img/imgApp/logo.png"
+
 export default function NavApp() {
   return (
     <div>

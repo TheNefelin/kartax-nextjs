@@ -1,6 +1,8 @@
 import './globals.css'
 import { Raleway, Roboto } from 'next/font/google'
 
+import NavPage from '@/components/NavPage'
+
 const raleway = Raleway({
   weight: '700',
   subsets: ['latin']
@@ -19,8 +21,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
-      {/* <NavApp></NavApp> */}
-      <body className={roboto.className}>{children}</body>
+      <body className={roboto.className}>
+        <NavPage></NavPage>
+        {children}
+      </body>
     </html>
   )
 }

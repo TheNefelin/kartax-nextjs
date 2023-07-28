@@ -1,0 +1,13 @@
+.nav {
+    background-color: var(--colorBase04);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4rem;
+    padding: 2rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
