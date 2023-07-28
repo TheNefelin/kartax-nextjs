@@ -20,6 +20,11 @@
 	margin: 0.5rem;
 }
 
+.login_icon {
+	width: 1rem;
+	color: var(--colorBase07);
+}
+
 .login_input {
 	color: var(--colorBase02);;
 	border: none;
@@ -39,11 +44,6 @@
 	border-bottom-color: var(--colorBase07);
 }
 
-.login_icon {
-	width: 1rem;
-	color: var(--colorBase07);
-}
-
 .login_input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
 	color: var(--colorBase02);
 	opacity: 1; /* Firefox */
@@ -55,4 +55,9 @@
   
 .login_input::-ms-input-placeholder { /* Microsoft Edge */
 	color: var(--colorBase02);
+}
+
+.links {
+	display: flex;
+	justify-content: space-around;
 }

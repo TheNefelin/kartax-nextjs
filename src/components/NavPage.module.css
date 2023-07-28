@@ -16,7 +16,7 @@
     color: var(--colorBase07);
     font-size: 1.5rem;
     text-shadow: 0 0 3px var(--colorBase01), 0 0 5px var(--colorBase01);
-    animation: colores 15s infinite;
+    animation: colores 10s infinite;
 }
 
 @keyframes colores {

@@ -22,7 +22,10 @@ export default function Login() {
         
         <Btn text="Iniciar Sesión"></Btn>
 
-        <Link className={style_linkB.link} href={"#"}>recuperar contraseña</Link>
+        <div className={styles.links}>
+          <Link className={style_linkB.link} href={"#"}>regístrate</Link>
+          <Link className={style_linkB.link} href={"#"}>recuperar contraseña</Link>
+        </div>
     </section>
   )
 }
