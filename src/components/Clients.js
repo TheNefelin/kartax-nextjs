@@ -16,11 +16,11 @@ export default async function Clients() {
 
 	return (
 		<section>
-			{datos.map((e) =>
+			{/* {datos.map((e) =>
 				<div>
 					<p>{e.nombre}</p>
 				</div>
-			)}
+			)} */}
 		</section>
 	)
 }
