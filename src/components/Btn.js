@@ -17,7 +17,7 @@ export default function Btn(props) {
     return data
   }
 
-  console.log(getData())
+  // console.log(getData())
 
   return (
     <div>
