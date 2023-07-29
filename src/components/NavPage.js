@@ -1,14 +1,15 @@
-// estilos
-import styles from './NavPage.module.css'
-import style_linkA from '@/components/LinkA.module.css'
-// elementos de Next
+import styles from '@/css/NavPage.module.css'
 import Link from 'next/link'
 import Image from 'next/image'
-// mis componentes
+
+//fuente
+import { Raleway } from 'next/font/google'
+//css
+import style_linkA from '@/css/LinkA.module.css'
+//componentes
 import BurgerBtn from './BurgerBtn'
+//img
 import logo from '@/img/imgApp/logo.png'
-// fuentes
-import { Lato, Poppins, Montserrat, Raleway } from 'next/font/google'
 
 const raleway = Raleway({
   weight: '700',

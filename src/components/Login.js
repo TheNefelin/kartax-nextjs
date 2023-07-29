@@ -1,9 +1,9 @@
-import styles from "./Login.module.css"
-import style_linkB from "./LinkB.module.css"
+import styles from "@/css/Login.module.css"
 import Link from "next/link"
+
+import style_linkB from "@/css/LinkB.module.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome' 
 import { faUser, faKey, faXmark } from '@fortawesome/free-solid-svg-icons'
-
 import Btn from "./Btn"
 
 export default function Login() {
