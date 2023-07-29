@@ -8,6 +8,7 @@ import style_link from '@/components/LinkA.module.css'
 import img from "@/img/imgApp/backgound_03.jpg"
 
 import Login from '@/components/Login'
+import Clients from '@/components/Clients'
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       />
       <Link className={style_link.link} href={"https://www.google.cl"} target='_blanck'>CLICK</Link>
       <Login></Login>
+      <Clients></Clients>
       {/* <div className={styles.icons}>
         <FontAwesomeIcon icon={faUser} color='blue'/>
         <FontAwesomeIcon icon={faUsers} color='blue'/>
