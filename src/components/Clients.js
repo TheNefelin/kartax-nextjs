@@ -10,17 +10,17 @@ const getData2 = async () => {
 }
 
 export default async function Clients() {
-	const datos = await getData()
+	const datos = await getData2()
 
 	console.log(datos)
 
 	return (
 		<section>
-			{/* {datos.map((e) =>
+			{datos.map((e) =>
 				<div>
 					<p>{e.nombre}</p>
 				</div>
-			)} */}
+			)}
 		</section>
 	)
 }
