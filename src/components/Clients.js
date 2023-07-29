@@ -17,8 +17,8 @@ export default async function Clients() {
 	return (
 		<section>
 			{datos.map((e) =>
-				<div>
-					<p key={e.id_negocio}>{e.nombre}</p>
+				<div key={e.id_negocio}>
+					<p>{e.nombre}</p>
 				</div>
 			)}
 		</section>
