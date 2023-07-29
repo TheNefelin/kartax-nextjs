@@ -20,7 +20,7 @@ export default function Login() {
           <input className={styles.login_input} type="password" placeholder="contraseña"/>
         </div>
         
-        <Btn text="Iniciar Sesión"></Btn>
+        <Btn text="Iniciar Sesión" usuario="NEFELIN" clave="123456" ></Btn>
 
         <div className={styles.links}>
           <Link className={style_linkB.link} href={"#"}>regístrate</Link>

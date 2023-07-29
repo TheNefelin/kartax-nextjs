@@ -23,11 +23,12 @@ export default function NavPage() {
             src={logo}
             height={50}
             width={50}
+            alt='logo'
           />
           <h1 className={raleway.className}>{"Kartax"}</h1>
         </Link>
         <BurgerBtn></BurgerBtn>
-        <div class="navBar-links">
+        <div className="navBar-links">
           <Link className={style_linkA.link} id="RRSS" href="#">RRSS</Link>
           <Link className={style_linkA.link} href="/iniciarSesion">Iniciar Sesión</Link>
           <Link className={style_linkA.link} href="/registrarse">Registrarse</Link>

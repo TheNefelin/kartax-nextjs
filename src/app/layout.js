@@ -1,5 +1,5 @@
 import './globals.css'
-import { Raleway, Roboto } from 'next/font/google'
+import { Lato, Roboto, Raleway, Montserrat, Poppins } from 'next/font/google'
 
 import NavPage from '@/components/NavPage'
 
