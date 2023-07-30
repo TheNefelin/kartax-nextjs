@@ -27,11 +27,6 @@ a {
   color: inherit
 }
 
-nav {
-  position: fixed;
-  width: 100%;
-}
-
 #background {
   position: fixed;
   z-index: -1;

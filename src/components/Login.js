@@ -11,7 +11,6 @@ import style_linkB from "@/css/LinkB.module.css"
 export default function Login() {
   return (
     <section className={styles.login}>
-        <FontAwesomeIcon className={styles.login_close} icon={faXmark}/>
         <h2>Bienvenido</h2>
         <div>
           <FontAwesomeIcon className={styles.login_icon} icon={faUser}/>

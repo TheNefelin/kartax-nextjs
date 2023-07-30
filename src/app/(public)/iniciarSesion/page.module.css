@@ -1,7 +1,6 @@
 .section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    display: grid;
+    place-items: center;
+    margin-top: 2rem;
     width: 100%;
 }
