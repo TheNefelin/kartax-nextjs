@@ -1,4 +1,5 @@
 .nav {
+    position: relative;
     background-color: var(--colorBase04);
     background: linear-gradient(45deg, var(--colorBase04), var(--colorBase01));
     display: flex;
@@ -24,3 +25,16 @@
     50%  {color: var(--colorBase02);}
     100% {color: var(--colorBase07);}
 }
+
+@media screen and (max-width: 600px){
+    .nav_links{
+        z-index: 1;
+        position: absolute;
+        top: 4rem;
+        left: 0;
+        width: 100%;
+        background-color: var(--colorBase04);
+        backdrop-filter: blur(10px);
+        display: grid;
+    }
+ }

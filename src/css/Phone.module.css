@@ -1,0 +1,30 @@
+.pagePhone {
+    background-color: var(--colorBase04);
+    display: grid;
+    justify-content: center;
+}
+
+.pagePhone a {
+    text-align: center;
+    padding: 1rem;
+}
+
+.phone {
+    background-color: var(--colorBase01);
+    border-radius: 40px;
+    width: 320px;
+    height: 600px;
+    Display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 30px 50px 100px var(--colorBase03);
+}
+.content {
+    border: 1px solid var(--colorBase02);
+    border-radius: 20px;
+    width: 94%;
+    height: 91%;
+    background-color: var(--colorBase02);
+    overflow: hidden;
+}
+

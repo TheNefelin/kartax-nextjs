@@ -11,8 +11,6 @@ const getData = async () => {
 export default async function Clients() {
   const data = await getData()
 
-  console.log(data)
-
   return (
     <section>
       {data.map(e =>
