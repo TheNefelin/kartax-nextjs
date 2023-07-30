@@ -1,10 +1,12 @@
 import styles from "@/css/Login.module.css"
 import Link from "next/link"
-
-import style_linkB from "@/css/LinkB.module.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome' 
 import { faUser, faKey, faXmark } from '@fortawesome/free-solid-svg-icons'
+
+//componentes
 import Btn from "./Btn"
+//css
+import style_linkB from "@/css/LinkB.module.css"
 
 export default function Login() {
   return (
@@ -23,8 +25,8 @@ export default function Login() {
         <Btn text="Iniciar Sesión" usuario="NEFELIN" clave="123456" ></Btn>
 
         <div className={styles.links}>
-          <Link className={style_linkB.link} href={"#"}>regístrate</Link>
-          <Link className={style_linkB.link} href={"#"}>recuperar contraseña</Link>
+          <Link className={style_linkB.link} rel="prefetch" href={"#"}>regístrate</Link>
+          <Link className={style_linkB.link} rel="prefetch" href={"#"}>recuperar contraseña</Link>
         </div>
     </section>
   )

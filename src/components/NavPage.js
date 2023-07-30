@@ -1,13 +1,12 @@
 import styles from '@/css/NavPage.module.css'
 import Link from 'next/link'
 import Image from 'next/image'
-
-//fuente
 import { Raleway } from 'next/font/google'
-//css
-import style_linkA from '@/css/LinkA.module.css'
+
 //componentes
 import BurgerBtn from './BurgerBtn'
+//css
+import style_linkA from '@/css/LinkA.module.css'
 //img
 import logo from '@/img/imgApp/logo.png'
 
@@ -30,10 +29,10 @@ export default function NavPage() {
         </Link>
         <BurgerBtn></BurgerBtn>
         <div className="navBar-links">
-          <Link className={style_linkA.link} id="RRSS" href="#">RRSS</Link>
-          <Link className={style_linkA.link} href="/iniciarSesion">Iniciar Sesión</Link>
-          <Link className={style_linkA.link} href="/registrarse">Registrarse</Link>
-          <Link className={style_linkA.link} href="/encuesta">Encuesta</Link>
+          {/* <Link className={style_linkA.link} rel="preload" href="#">RRSS</Link> */}
+          <Link className={style_linkA.link} rel="prefetch" href="/iniciarSesion">Iniciar Sesión</Link>
+          <Link className={style_linkA.link} rel="prefetch" href="/clientes">Clientes</Link>
+          <Link className={style_linkA.link} rel="prefetch" href="/encuesta">Encuesta</Link>
         </div>
     </section>
   )
