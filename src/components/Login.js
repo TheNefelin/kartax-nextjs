@@ -4,11 +4,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser, faKey } from '@fortawesome/free-solid-svg-icons'
 
 //componentes
-import MyLoading from "./MyLoading"
 import Btn from "./Btn"
 //css
 import style_linkB from "@/css/LinkB.module.css"
-import { Suspense } from "react"
 
 export default function Login() {
   return (
