@@ -5,6 +5,8 @@ export default function Phone() {
   return (
     <section>
       <h1>Demo</h1>
+      <h1>Demo</h1>
+      <h1>Demo</h1>
       <Link
         target="_blank"
         href="https://kartax-express-production.up.railway.app/kartax/1">
