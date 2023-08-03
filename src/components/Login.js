@@ -10,7 +10,7 @@ import style_linkB from "@/css/LinkB.module.css"
 
 export default function Login() {
   return (
-    <section className={styles.login}>
+    <form className={styles.login} >
       <h2>Bienvenido</h2>
       <div>
         <FontAwesomeIcon className={styles.login_icon} icon={faUser} />
@@ -27,6 +27,6 @@ export default function Login() {
         <Link className={style_linkB.link} rel="prefetch" href={"#"}>regístrate</Link>
         <Link className={style_linkB.link} rel="prefetch" href={"#"}>recuperar contraseña</Link>
       </div>
-    </section>
+    </form>
   )
 }
