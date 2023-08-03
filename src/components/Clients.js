@@ -1,19 +1,24 @@
 import Image from "next/image"
-
 //img
 import img from "@/img/imgApp/logo.png"
-
-const getData = async () => {
-  const res = await fetch("https://kartax-api-py.vercel.app/negocio/", { cache: 'no-store' })
-  return await res.json()
-}
+//fetching class
+import FetchingApi from "@/services/fetchingApi"
+const api = new FetchingApi()
 
 export default async function Clients() {
-  const data = await getData()
+  const data = await api.get_root({ cache: 'no-store' })
+  console.log(data)
 
   return (
     <section>
-      {data.map(e =>
+      {data.length > 0 && data.map(e =>
+        <div key={e.id_negocio}>
+          <div>
+            <h2>{e.msge}</h2>
+          </div>
+        </div>
+      )}
+      {/* {data.length > 0 && data.map(e =>
         <div key={e.id_negocio}>
           <Image 
             src={img}
@@ -26,7 +31,7 @@ export default async function Clients() {
             <p>{e.descripcion}</p>
           </div>
         </div>
-      )}
+      )} */}
     </section>
   )
 }

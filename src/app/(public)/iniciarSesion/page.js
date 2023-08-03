@@ -1,10 +1,16 @@
+import { Suspense } from 'react'
 import styles from './page.module.css'
-import Login from '@/components/Login'
 
-export default function iniciarSesion() {
+//componentes
+import Login from '@/components/Login'
+import MyLoading from '@/components/MyLoading'
+
+export default function IniciarSesion() {
   return (
-    <div className={styles.section}>
-      <Login></Login>
-    </div>
+    <Suspense fallback={<MyLoading></MyLoading>}>
+      <div className={styles.section}>
+        <Login></Login>
+      </div>
+    </Suspense>
   )
 }

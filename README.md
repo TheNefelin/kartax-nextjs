@@ -38,6 +38,8 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 npm install @fortawesome/fontawesome-svg-core
 npm install @fortawesome/react-fontawesome
 npm install @fortawesome/free-solid-svg-icons
+
+npm install swr
 ```
 
 

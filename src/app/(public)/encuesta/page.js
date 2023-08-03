@@ -1,6 +1,10 @@
 
-export default function encuesta() {
+
+export default function Encuesta() {
   return (
-    <div>Encuesta</div>
+    <div>
+      Encuesta
+
+    </div>
   )
 }

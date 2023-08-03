@@ -1,7 +1,7 @@
 //components
 import Clients from '@/components/Clients'
 
-export default function clientes() {
+export default function Clientes() {
   return (
     <div>
         <Clients></Clients>
