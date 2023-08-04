@@ -2,7 +2,7 @@ import Image from "next/image"
 //img
 import img from "@/img/imgApp/logo.png"
 //fetching class
-import FetchingApi from "@/services/fetchingApi"
+import FetchingApi from "@/utils/fetchingApi"
 const api = new FetchingApi()
 
 export default async function Clients() {

@@ -2,7 +2,6 @@
 	position: relative;
 	color: var(--colorBase07);
 	text-align: center;
-	width: 20rem;
 	border: solid 1px var(--colorBase01);
 	border-radius: 5px;
 	display: grid;
@@ -53,4 +52,8 @@
 .links {
 	display: flex;
 	justify-content: space-around;
+}
+
+.btn {
+	margin: auto;
 }

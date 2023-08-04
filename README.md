@@ -39,7 +39,11 @@ npm install @fortawesome/fontawesome-svg-core
 npm install @fortawesome/react-fontawesome
 npm install @fortawesome/free-solid-svg-icons
 
-npm install swr
+npm install axios
+
+npm install next-auth // sin usar
+npm install swr //sin usar
+
 ```
 
 
