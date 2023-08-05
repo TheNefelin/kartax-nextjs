@@ -17,11 +17,11 @@ export default function CheckIn() {
   const fetchingApi = new FetchingApi()
 
   const [newUser, setNewUser] = useState({
-    nombres: "",
-    apellidos: "",
-    usuario: "",
-    correo: "",
-    clave: ""
+    nombres: null,
+    apellidos: null,
+    usuario: null,
+    correo: null,
+    clave: null
   })  
 
   const [validate, setValidate] = useState({
@@ -51,7 +51,7 @@ export default function CheckIn() {
   }
 
   const validarCampos = () => {
-    if (newUser.nombres == "" || newUser.apellidos == "" || newUser.usuario == "" || newUser.correo == "" || newUser.clave == ""){
+    if (!newUser.nombres || !newUser.apellidos || !newUser.usuario || !newUser.correo || !newUser.clave ){
       setValidate({
         ...validate,
         err_estado: true,
@@ -94,7 +94,7 @@ export default function CheckIn() {
       </div>
       <div>
         <FontAwesomeIcon className={style_form.login_icon} icon={faUser} />
-        <input onChange={(e) => setNewUser({...newUser, correo: e.target.value})} className={style_form.login_input} type="text" placeholder="Email" />
+        <input onChange={(e) => setNewUser({...newUser, correo: e.target.value})} className={style_form.login_input} type="email" placeholder="Email" />
       </div>
       <div>
         <FontAwesomeIcon className={style_form.login_icon} icon={faUser} />

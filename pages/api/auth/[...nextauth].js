@@ -11,19 +11,23 @@ export const authOptions = {
       },
 
       async authorize(credentials, req) {
-        const user = { id: "1", name: "J Smith", email: "jsmith@example.com" }
-
-        if (user) {
-          return user
+        console.log("-- NextAuth -------")
+        if (credentials.username == "nefelin") {
+          console.log("SI")
+          console.log(credentials)
+          return credentials
         } else {
+          console.log("NO")
           return null
         }
       }
     })
   ],
-  session: {
-    strategy: "jwt",
-  }  
+  // session: {
+  //   strategy: "jwt"
+  // },
+  secret: "666",
+  debug: "development",
 }
 
 export default NextAuth(authOptions)

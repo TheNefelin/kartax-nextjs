@@ -3,9 +3,9 @@
 import Link from "next/link"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faUser, faKey } from "@fortawesome/free-solid-svg-icons"
-import { useState, useTransition } from "react"
+import { useState } from "react"
 import { useRouter } from "next/navigation"
-import route from "@/app/api/auth/[...nextauth]/route"
+import { signIn } from "next-auth/react"
 //utils
 import FetchingApi from "@/utils/fetchingApi"
 //css
@@ -17,34 +17,34 @@ export default function Login() {
   const router = useRouter()
   const fetchingApi = new FetchingApi()
 
-  const [newLogin, setNewLogin] = useState({
-    usuario: null,
-    clave: null
-  })
-
+  //state thaht validate
   const [validate, setValidate] = useState({
     err_estado: false,
     err_msge: ""
   })
 
+  // state for my credentials login access
+  const [credentials, setCredentials] = useState({
+    username: "",
+    password: ""
+  })
+  
+  //validate credential on api foder auth
   const loginAcces = async (e) => {
     e.preventDefault()
 
-    const res = await fetchingApi.post_login(newLogin.usuario, newLogin.clave)
-    const data = await res.json()
+    const result = await signIn('credentials', {
+      ...credentials,
+      redirect: false
+    })
 
-    if (res.ok) {
-      const prueba1 = await fetchingApi.get_token(data.access_token)
-      const prueba2 = await prueba1.json()
-      console.log(prueba2)
-
-      router.push("/panel")
+    if (result?.error) {
+      console.log("########## NO Paso el Login")
+      // console.error('Error de autenticación:', result.error);
+      router.push('/panel')
     } else {
-      setValidate({
-        ...validate,
-        err_estado: true,
-        err_msge: data.detail
-      })
+      console.log("########## Paso el Login")
+      router.push('/panel');
     }
   }
 
@@ -53,11 +53,11 @@ export default function Login() {
       <h2>Bienvenido</h2>
       <div>
         <FontAwesomeIcon className={style_form.login_icon} icon={faUser} />
-        <input onChange={(e) => { setNewLogin({ ...newLogin, usuario: e.target.value }) }} className={style_form.login_input} type="text" placeholder="Email / Usuario" />
+        <input onChange={(e) => { setCredentials({ ...credentials, username: e.target.value }) }} className={style_form.login_input} type="text" placeholder="Email / Usuario" />
       </div>
       <div>
         <FontAwesomeIcon className={style_form.login_icon} icon={faKey} />
-        <input onChange={(e) => { setNewLogin({ ...newLogin, clave: e.target.value }) }} className={style_form.login_input} type="password" placeholder="contraseña" />
+        <input onChange={(e) => { setCredentials({ ...credentials, password: e.target.value }) }} className={style_form.login_input} type="password" placeholder="contraseña" />
       </div>
 
       <input className={`${style_btn.btn} ${style_form.btn}`} type="submit" value="Iniciar Sesión" />
@@ -70,3 +70,25 @@ export default function Login() {
     </form>
   )
 }
+
+    // signIn("credentials", {
+    //   ...credentials,
+    //   redirect: false
+    // })
+
+    // const res = await fetchingApi.post_login(credentials.usuario, credentials.clave)
+    // const data = await res.json()
+
+    // if (res.ok) {
+    //   const prueba1 = await fetchingApi.get_token(data.access_token)
+    //   const prueba2 = await prueba1.json()
+    //   console.log(prueba2)
+
+    //   router.push("/panel")
+    // } else {
+    //   setValidate({
+    //     ...validate,
+    //     err_estado: true,
+    //     err_msge: data.detail
+    //   })
+    // }
