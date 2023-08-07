@@ -29,7 +29,7 @@ export default function Login() {
     password: ""
   })
   
-  //validate credential on api foder auth
+  //validate credential on api folder auth
   const loginAcces = async (e) => {
     e.preventDefault()
 
@@ -41,8 +41,9 @@ export default function Login() {
     if (result?.error) {
       console.log("########## NO Paso el Login")
       // console.error('Error de autenticación:', result.error);
-      router.push('/panel')
+      router.push('/')
     } else {
+      console.log(result)
       console.log("########## Paso el Login")
       router.push('/panel');
     }
@@ -71,24 +72,3 @@ export default function Login() {
   )
 }
 
-    // signIn("credentials", {
-    //   ...credentials,
-    //   redirect: false
-    // })
-
-    // const res = await fetchingApi.post_login(credentials.usuario, credentials.clave)
-    // const data = await res.json()
-
-    // if (res.ok) {
-    //   const prueba1 = await fetchingApi.get_token(data.access_token)
-    //   const prueba2 = await prueba1.json()
-    //   console.log(prueba2)
-
-    //   router.push("/panel")
-    // } else {
-    //   setValidate({
-    //     ...validate,
-    //     err_estado: true,
-    //     err_msge: data.detail
-    //   })
-    // }

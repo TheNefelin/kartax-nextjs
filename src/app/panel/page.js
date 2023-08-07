@@ -1,17 +1,11 @@
 'use client'
-import { useSession } from 'next-auth/react';
-import { useRouter } from 'next/navigation';
+import { useSession } from "next-auth/react"
 
 export default function Panel() {
-  const { data: session, status } = useSession();
-  const prueba = useSession();
-  const router = useRouter();
-
-  console.log("-- Panel -----------")
-  console.log(status)
+  const { data: session, state } = useSession()
+  console.log("--- Panel -----------")
   console.log(session)
-  console.log("-- Prueba ----------")
-  console.log(prueba)
+  console.log(state)
 
   return (
     <div>Panel</div>

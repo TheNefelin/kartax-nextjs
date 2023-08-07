@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { Lato, Roboto, Raleway, Montserrat, Poppins } from 'next/font/google'
 
 //componentes
+import Provider from '@/context/Provider'
 import NavPage from '@/components/NavPage'
 //img
 import img from "@/img/imgApp/backgound_03.jpg"
@@ -20,16 +21,18 @@ const roboto = Roboto({
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
-      <body className={roboto.className}>
-        <NavPage></NavPage>
-        <Image
-          id='background'
-          src={img}
-          alt='fondo'
-          rel="prefetch"
-        />
-        {children}
-      </body>
+      <Provider>
+        <body className={roboto.className}>
+          <NavPage></NavPage>
+          <Image
+            id='background'
+            src={img}
+            alt='fondo'
+            rel="prefetch"
+          />
+          {children}
+        </body>
+      </Provider>
     </html>
   )
 }
