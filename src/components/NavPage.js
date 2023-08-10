@@ -30,9 +30,9 @@ export default function NavPage() {
       <BurgerBtn></BurgerBtn>
       <div className={styles.nav_links}>
         {/* <Link className={style_linkA.link} rel="preload" href="#">RRSS</Link> */}
-        <Link className={style_linkA.link} rel="prefetch" href="/iniciarSesion">Iniciar Sesión</Link>
         <Link className={style_linkA.link} rel="prefetch" href="/clientes">Clientes</Link>
         <Link className={style_linkA.link} rel="prefetch" href="/encuesta">Encuesta</Link>
+        <Link className={style_linkA.link} rel="prefetch" href="/iniciarSesion">Iniciar Sesión</Link>
       </div>
     </section>
   )

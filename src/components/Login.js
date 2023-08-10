@@ -6,8 +6,6 @@ import { faUser, faKey } from "@fortawesome/free-solid-svg-icons"
 import { useState } from "react"
 import { useRouter } from "next/navigation"
 import { signIn } from "next-auth/react"
-//utils
-import FetchingApi from "@/utils/fetchingApi"
 //css
 import style_form from "@/css/Form.module.css"
 import style_btn from "@/css/Btn.module.css"
@@ -15,7 +13,6 @@ import style_linkB from "@/css/LinkB.module.css"
 
 export default function Login() {
   const router = useRouter()
-  const fetchingApi = new FetchingApi()
 
   //state thaht validate
   const [validate, setValidate] = useState({
@@ -28,24 +25,22 @@ export default function Login() {
     username: "",
     password: ""
   })
-  
+
   //validate credential on api folder auth
   const loginAcces = async (e) => {
     e.preventDefault()
 
     const result = await signIn('credentials', {
-      ...credentials,
+      username: credentials.username,
+      password: credentials.password,
       redirect: false
     })
 
+    console.log(result)
     if (result?.error) {
-      console.log("########## NO Paso el Login")
-      // console.error('Error de autenticación:', result.error);
-      router.push('/')
+      console.error('Error de autenticación:', result.error);
     } else {
-      console.log(result)
-      console.log("########## Paso el Login")
-      router.push('/panel');
+      router.push('/dashboard')
     }
   }
 

@@ -6,7 +6,7 @@ import { faCheckCircle, faUser, faKey } from "@fortawesome/free-solid-svg-icons"
 import { useState } from "react"
 import { useRouter } from "next/navigation"
 //utils
-import FetchingApi from "@/utils/fetchingApi"
+import FetchingApi from "@/context/FetchingApi"
 //css
 import style_form from "@/css/Form.module.css"
 import style_btn from "@/css/Btn.module.css"
