@@ -8,17 +8,17 @@ import { Raleway } from 'next/font/google'
 import BurgerBtn from './BurgerBtn'
 //css
 import styles from '@/css/NavPage.module.css'
-import style_linkA from '@/css/LinkA.module.css'
 import style_linkC from '@/css/LinkC.module.css'
 //img
 import logo from '@/img/imgApp/logo.png'
+import { signOut } from 'next-auth/react'
 
 const raleway = Raleway({
   weight: '700',
   subsets: ['latin']
 })
 
-export default function NavPage() {
+export default function NavApp() {
   const [estadoBurger, setEstadoBurger] = useState(false)
   const menu_links = !estadoBurger ? `${styles.nav_links} ${styles.nav_links_visible}` : styles.nav_links 
 
@@ -39,7 +39,7 @@ export default function NavPage() {
           width={50}
           alt='logo'
         />
-        <h1 className={raleway.className}>{"Kartax"}</h1>
+        <h1 className={raleway.className}>{"Francisco Carmona"}</h1>
       </Link>
 
       <span onClick={burger_click} className={styles.burger_visible}>
@@ -47,10 +47,7 @@ export default function NavPage() {
       </span>
  
       <div className={menu_links}>
-        {/* <Link onClick={burger_reset} className={style_linkA.link} rel="prefetch" href="#">RRSS</Link> */}
-        <Link onClick={burger_reset} className={style_linkA.link} rel="prefetch" href="/clientes">Clientes</Link>
-        <Link onClick={burger_reset} className={style_linkA.link} rel="prefetch" href="/encuesta">Encuesta</Link>
-        <Link onClick={burger_reset} className={style_linkC.link} rel="prefetch" href="/iniciarSesion">Iniciar Sesión</Link>
+        <Link onClick={() => {burger_reset, signOut()}} className={style_linkC.link} rel="prefetch" href="/iniciarSesion">Cerrar Sesión</Link>
       </div>
     </section>
   )

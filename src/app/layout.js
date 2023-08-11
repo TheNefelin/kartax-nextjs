@@ -1,9 +1,8 @@
-import './globals.css'
 import Image from 'next/image'
 import { Lato, Roboto, Raleway, Montserrat, Poppins } from 'next/font/google'
-
+//css
+import './globals.css'
 //componentes
-import NavPage from '@/components/NavPage'
 import Provider from '@/context/Provider'
 //img
 import img from "@/img/imgApp/backgound_03.jpg"
@@ -23,7 +22,6 @@ export default function RootLayout({ children }) {
     <html lang="es">
       <body className={roboto.className}>
       <Provider>
-        <NavPage></NavPage>
         <Image
           id='background'
           src={img}
