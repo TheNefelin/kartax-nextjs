@@ -1,5 +1,6 @@
 .link {
     color: var(--colorBase02);
+    transition: 0.3s;
 }
 
 .link:hover {

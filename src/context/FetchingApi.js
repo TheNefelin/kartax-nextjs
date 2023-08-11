@@ -8,7 +8,8 @@ export default class FetchingApi {
   async post_login(usuario, clave) {return await fnFetching(`${this._api}/usuario-logearse/`, login_obj(usuario, clave))}
   async get_token(access_token) {return await fnFetching(`${this._api}/token/`, get_private(access_token))}
   //clientes
-  async get_clientes(obj) {return await fnFetching(`${this._api}/negocio/'`, get_public())}
+  async get_clientes() {return await fnFetching(`${this._api}/negocio/'`, get_public())}
+  //panel
 }
 
 //execute all fetching

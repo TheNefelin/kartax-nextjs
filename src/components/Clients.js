@@ -3,21 +3,21 @@ import Image from "next/image"
 import img from "@/img/imgApp/logo.png"
 //fetching class
 import FetchingApi from "@/context/FetchingApi"
-const api = new FetchingApi()
 
 export default async function Clients() {
-  const data = await api.get_root({ cache: 'no-store' })
+  const fetchingApi = new FetchingApi()
+  const data = await fetchingApi.get_clientes()
   console.log(data)
 
   return (
     <section>
-      {data.length > 0 && data.map(e =>
+      {/* {data.length > 0 && data.map(e =>
         <div key={e.id_negocio}>
           <div>
             <h2>{e.msge}</h2>
           </div>
         </div>
-      )}
+      )} */}
       {/* {data.length > 0 && data.map(e =>
         <div key={e.id_negocio}>
           <Image 

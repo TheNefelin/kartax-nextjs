@@ -20,6 +20,10 @@
     animation: colores 10s infinite;
 }
 
+.burger_visible {
+    display: none;
+}
+
 @keyframes colores {
     0%   {color: var(--colorBase07);}
     50%  {color: var(--colorBase02);}
@@ -36,5 +40,14 @@
         background-color: var(--colorBase04);
         backdrop-filter: blur(10px);
         display: grid;
+        transition: 0.3s;
+    }
+
+    .nav_links_visible {
+        left: 100%;
+    }
+
+    .burger_visible {
+        display: block;
     }
  }
