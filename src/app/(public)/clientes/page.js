@@ -8,7 +8,7 @@ import { Suspense } from 'react'
 export default function Clientes() {
   return (
     <Suspense fallback={<MyLoading></MyLoading>}>
-        <Clients></Clients>
+      <Clients></Clients>
     </Suspense>
   )
 }
