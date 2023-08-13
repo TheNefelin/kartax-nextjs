@@ -17,13 +17,13 @@ export const authOptions = {
         async authorize(credentials, req) {
           const fetchingApi = new FetchingApi()
           const result = await fetchingApi.post_login(credentials.username, credentials.password)
+          const data = await result.json()
 
-          if (!result.ok) {
-            return null
-          } else {
-            const data = await result.json()
+          if (result.ok && data) {
             const user = { id: "1", name: `${data.nombres} ${data.apellidos}`, email: data.correo, roles: data.rol }
             return user
+          } else {
+            return null
           }
         }
       })

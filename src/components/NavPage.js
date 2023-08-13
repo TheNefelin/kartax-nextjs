@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useState } from 'react'
 import { Raleway } from 'next/font/google'
+import { signOut, useSession } from 'next-auth/react'
 //componentes
 import BurgerBtn from './BurgerBtn'
 //css
@@ -12,6 +13,7 @@ import style_linkA from '@/css/LinkA.module.css'
 import style_linkC from '@/css/LinkC.module.css'
 //img
 import logo from '@/img/imgApp/logo.png'
+import { redirect } from 'next/dist/server/api-utils'
 
 const raleway = Raleway({
   weight: '700',
@@ -19,8 +21,11 @@ const raleway = Raleway({
 })
 
 export default function NavPage() {
+  const { data: session } = useSession()
+  console.log(session)
+
   const [estadoBurger, setEstadoBurger] = useState(false)
-  const menu_links = !estadoBurger ? `${styles.nav_links} ${styles.nav_links_visible}` : styles.nav_links 
+  const menu_links = !estadoBurger ? `${styles.nav_links} ${styles.nav_links_visible}` : styles.nav_links
 
   const burger_click = () => {
     setEstadoBurger(!estadoBurger)
@@ -30,28 +35,56 @@ export default function NavPage() {
     setEstadoBurger(false)
   }
 
+  const cerrarSesion = async () => {
+    await signOut()
+  }
+ 
   return (
     <section className={styles.nav}>
-      <Link onClick={burger_reset} href="/" className={styles.logo}>
-        <Image
-          src={logo}
-          height={50}
-          width={50}
-          alt='logo'
-        />
-        <h1 className={raleway.className}>{"Kartax"}</h1>
-      </Link>
+      {session ?
+        <>
+          <Link onClick={burger_reset} href="/dashboard" className={styles.logo}>
+            <Image
+              src={logo}
+              height={50}
+              width={50}
+              alt='logo'
+            />
+            {/* <h1 className={raleway.className}>{"Kartax"}</h1> */}
+          </Link>
 
-      <span onClick={burger_click} className={styles.burger_visible}>
-        <BurgerBtn isClick={estadoBurger} ></BurgerBtn>
-      </span>
- 
-      <div className={menu_links}>
-        {/* <Link onClick={burger_reset} className={style_linkA.link} rel="prefetch" href="#">RRSS</Link> */}
-        <Link onClick={burger_reset} className={style_linkA.link} rel="prefetch" href="/clientes">Clientes</Link>
-        <Link onClick={burger_reset} className={style_linkA.link} rel="prefetch" href="/encuesta">Encuesta</Link>
-        <Link onClick={burger_reset} className={style_linkC.link} rel="prefetch" href="/iniciarSesion">Iniciar Sesión</Link>
-      </div>
+          <span onClick={burger_click} className={styles.burger_visible}>
+            <BurgerBtn isClick={estadoBurger} ></BurgerBtn>
+          </span>
+
+          <div className={menu_links}>
+            <Link onClick={cerrarSesion} className={style_linkC.link} rel="prefetch" href="/#">Cerrar Sesión</Link>
+          </div>
+        </>
+        :
+        <>
+          <Link onClick={burger_reset} href="/" className={styles.logo}>
+            <Image
+              src={logo}
+              height={50}
+              width={50}
+              alt='logo'
+            />
+            <h1 className={raleway.className}>{"Kartax"}</h1>
+          </Link>
+
+          <span onClick={burger_click} className={styles.burger_visible}>
+            <BurgerBtn isClick={estadoBurger} ></BurgerBtn>
+          </span>
+
+          <div className={menu_links}>
+            {/* <Link onClick={burger_reset} className={style_linkA.link} rel="prefetch" href="#">RRSS</Link> */}
+            <Link onClick={burger_reset} className={style_linkA.link} rel="prefetch" href="/clientes">Clientes</Link>
+            <Link onClick={burger_reset} className={style_linkA.link} rel="prefetch" href="/encuesta">Encuesta</Link>
+            <Link onClick={burger_reset} className={style_linkC.link} rel="prefetch" href="/iniciarSesion">Iniciar Sesión</Link>
+          </div>
+        </>
+      }
     </section>
   )
 }
