@@ -8,11 +8,11 @@ import MyLoading from '@/components/MyLoading'
 export default function IniciarSesion() {
   return (
     <Suspense fallback={<MyLoading></MyLoading>}>
-      <div className={styles.section}>
+      <section className={styles.section}>
         <div className={styles.form}>
           <Login ></Login>
         </div>
-      </div>
+      </section>
     </Suspense>
   )
 }

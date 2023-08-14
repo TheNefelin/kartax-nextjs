@@ -1,4 +1,8 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+  images: {
+    domains: ["kartax-api-py.vercel.app"],
+  },
+}
 
 module.exports = nextConfig

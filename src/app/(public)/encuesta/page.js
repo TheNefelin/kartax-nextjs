@@ -1,10 +1,10 @@
-
+import MyLoading from "@/components/MyLoading";
+import { Suspense } from "react";
 
 export default function Encuesta() {
   return (
-    <div>
-      Encuesta
-
-    </div>
+    <Suspense fallback={<MyLoading></MyLoading>}>
+      <div>Encuesta</div>
+    </Suspense>
   )
 }

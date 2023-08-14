@@ -13,7 +13,6 @@ import style_linkA from '@/css/LinkA.module.css'
 import style_linkC from '@/css/LinkC.module.css'
 //img
 import logo from '@/img/imgApp/logo.png'
-import { redirect } from 'next/dist/server/api-utils'
 
 const raleway = Raleway({
   weight: '700',
@@ -21,9 +20,7 @@ const raleway = Raleway({
 })
 
 export default function NavPage() {
-  const { data: session } = useSession()
-  console.log(session)
-
+  const { data: session, status } = useSession()
   const [estadoBurger, setEstadoBurger] = useState(false)
   const menu_links = !estadoBurger ? `${styles.nav_links} ${styles.nav_links_visible}` : styles.nav_links
 
@@ -36,32 +33,12 @@ export default function NavPage() {
   }
 
   const cerrarSesion = async () => {
-    await signOut()
+    await signOut({callbackUrl: "/"})
   }
- 
+  
   return (
     <section className={styles.nav}>
-      {session ?
-        <>
-          <Link onClick={burger_reset} href="/dashboard" className={styles.logo}>
-            <Image
-              src={logo}
-              height={50}
-              width={50}
-              alt='logo'
-            />
-            {/* <h1 className={raleway.className}>{"Kartax"}</h1> */}
-          </Link>
-
-          <span onClick={burger_click} className={styles.burger_visible}>
-            <BurgerBtn isClick={estadoBurger} ></BurgerBtn>
-          </span>
-
-          <div className={menu_links}>
-            <Link onClick={cerrarSesion} className={style_linkC.link} rel="prefetch" href="/#">Cerrar Sesión</Link>
-          </div>
-        </>
-        :
+      {status === "unauthenticated" &&
         <>
           <Link onClick={burger_reset} href="/" className={styles.logo}>
             <Image
@@ -82,6 +59,28 @@ export default function NavPage() {
             <Link onClick={burger_reset} className={style_linkA.link} rel="prefetch" href="/clientes">Clientes</Link>
             <Link onClick={burger_reset} className={style_linkA.link} rel="prefetch" href="/encuesta">Encuesta</Link>
             <Link onClick={burger_reset} className={style_linkC.link} rel="prefetch" href="/iniciarSesion">Iniciar Sesión</Link>
+          </div>
+        </>
+      }
+      {status === "authenticated" &&
+        <>
+          <Link onClick={burger_reset} href="/dashboard" className={styles.logo}>
+            <Image
+              
+              src={session.user.image}
+              height={50}
+              width={50}
+              alt='logo'
+            />
+            <p className={raleway.className}>{session.user.name}</p>
+          </Link>
+
+          <span onClick={burger_click} className={styles.burger_visible}>
+            <BurgerBtn isClick={estadoBurger} ></BurgerBtn>
+          </span>
+
+          <div className={menu_links}>
+            <Link onClick={cerrarSesion} className={style_linkC.link} rel="prefetch" href="/#">Cerrar Sesión</Link>
           </div>
         </>
       }

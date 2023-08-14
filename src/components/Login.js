@@ -36,9 +36,9 @@ export default function Login() {
       redirect: false
     })
 
-    console.log(result)
     if (result?.error) {
       console.error('Error de autenticación:', result.error);
+      setValidate({...validate, err_estado: true, err_msge: "Usuario o Contraseña Icorrecta"})
     } else {
       router.push('/dashboard')
     }
