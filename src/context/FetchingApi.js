@@ -7,8 +7,12 @@ export default class FetchingApi {
   async post_register(body) {return await fnFetching(`${this._api}/usuario-registrarse/`, post_public(body))}
   async post_login(usuario, clave) {return await fnFetching(`${this._api}/usuario-logearse/`, login_obj(usuario, clave))}
   async get_token(access_token) {return await fnFetching(`${this._api}/token/`, get_private(access_token))}
-  //clientes
-  async get_clientes() {return await fnFetching(`${this._api}/negocio/'`, get_public())}
+  //clients
+  async get_clients() {return await fnFetching(`${this._api}/cliente/`, get_public())}
+  async get_clients_byid(id) {return await fnFetching(`${this._api}/cliente/${id}`, get_public())}
+  //user
+  async get_user_all() {return await fnFetching(`${this._api}/usuario/`, get_public())}
+  async get_user_byid(id) {return await fnFetching(`${this._api}/usuario/${id}`, get_public())}
   //panel
 }
 

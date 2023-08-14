@@ -11,7 +11,9 @@ npm install @fortawesome/fontawesome-svg-core
 npm install @fortawesome/react-fontawesome
 npm install @fortawesome/free-solid-svg-icons
 
-npm install next-auth 
+npm install next-auth
+npm install leaflet
+npm install react-leaflet
 ```
 
 

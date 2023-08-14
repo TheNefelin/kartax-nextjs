@@ -20,7 +20,11 @@ export const authOptions = {
           const data = await result.json()
 
           if (result.ok && data) {
-            const user = { id: "1", name: `${data.nombres} ${data.apellidos} (${data.rol})`, email: data.correo, image: "https://kartax-api-py.vercel.app/static/imgKartax/idle.png" }
+            const user = { 
+              id: "1", name: `${data.nombres} ${data.apellidos} (${data.rol})`, 
+              email: data.correo, 
+              image: "https://kartax-api-py.vercel.app/static/imgKartax/idle.png",
+            }
             return user
           } else {
             return null
