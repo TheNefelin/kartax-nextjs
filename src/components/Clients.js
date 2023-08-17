@@ -15,8 +15,8 @@ export default async function Clients() {
 
   return (
     <section>
-      {data.length > 0 && data.map(e =>
-        <article>
+      {data.length > 0 && data.map((e, index) =>
+        <article key={index}>
           <Image
             src={img}
             height={50}
