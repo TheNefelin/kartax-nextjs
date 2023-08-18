@@ -9,6 +9,7 @@ import { useRouter } from "next/navigation"
 import FetchingApi from "@/context/FetchingApi"
 //css
 import style_form from "@/css/Form.module.css"
+import style_card from "@/css/Card.module.css"
 import style_btn from "@/css/Btn.module.css"
 import style_linkB from "@/css/LinkB.module.css"
 
@@ -82,31 +83,31 @@ export default function CheckIn() {
   }
 
   return (
-    <form className={style_form.login} onSubmit={newSubmit}>
+    <form className={`${style_card.card} ${style_form.form}`} onSubmit={newSubmit}>
       <h2>Registrarse</h2>
       <div>
-        <FontAwesomeIcon className={style_form.login_icon} icon={faCheckCircle} />
-        <input onChange={(e) => setNewUser({...newUser, nombres: e.target.value})} className={style_form.login_input} type="text" placeholder="Nombres" />
+        <FontAwesomeIcon className={style_form.form_icon} icon={faCheckCircle} />
+        <input onChange={(e) => setNewUser({...newUser, nombres: e.target.value})} className={style_form.form_input} type="text" placeholder="Nombres" />
       </div>
       <div>
-        <FontAwesomeIcon className={style_form.login_icon} icon={faCheckCircle} />
-        <input onChange={(e) => setNewUser({...newUser, apellidos: e.target.value})} className={style_form.login_input} type="text" placeholder="Apellidos" />
+        <FontAwesomeIcon className={style_form.form_icon} icon={faCheckCircle} />
+        <input onChange={(e) => setNewUser({...newUser, apellidos: e.target.value})} className={style_form.form_input} type="text" placeholder="Apellidos" />
       </div>
       <div>
-        <FontAwesomeIcon className={style_form.login_icon} icon={faUser} />
-        <input onChange={(e) => setNewUser({...newUser, correo: e.target.value})} className={style_form.login_input} type="email" placeholder="Email" />
+        <FontAwesomeIcon className={style_form.form_icon} icon={faUser} />
+        <input onChange={(e) => setNewUser({...newUser, correo: e.target.value})} className={style_form.form_input} type="email" placeholder="Email" />
       </div>
       <div>
-        <FontAwesomeIcon className={style_form.login_icon} icon={faUser} />
-        <input onChange={(e) => setNewUser({...newUser, usuario: e.target.value})} className={style_form.login_input} type="text" placeholder="Usuario" />
+        <FontAwesomeIcon className={style_form.form_icon} icon={faUser} />
+        <input onChange={(e) => setNewUser({...newUser, usuario: e.target.value})} className={style_form.form_input} type="text" placeholder="Usuario" />
       </div>
       <div>
-        <FontAwesomeIcon className={style_form.login_icon} icon={faKey} />
-        <input onChange={(e) => setNewUser({...newUser, clave: e.target.value})} className={style_form.login_input} type="password" placeholder="contraseña" />
+        <FontAwesomeIcon className={style_form.form_icon} icon={faKey} />
+        <input onChange={(e) => setNewUser({...newUser, clave: e.target.value})} className={style_form.form_input} type="password" placeholder="contraseña" />
       </div>
       <div>
-        <FontAwesomeIcon className={style_form.login_icon} icon={faKey} />
-        <input onChange={(e) => setValidate({...validate, clave: e.target.value})} className={style_form.login_input} type="password" placeholder="confirmar contraseña" />
+        <FontAwesomeIcon className={style_form.form_icon} icon={faKey} />
+        <input onChange={(e) => setValidate({...validate, clave: e.target.value})} className={style_form.form_input} type="password" placeholder="confirmar contraseña" />
       </div>
 
       <input className={`${style_btn.btn} ${style_form.btn}`} type="submit" value="Registrarse" />

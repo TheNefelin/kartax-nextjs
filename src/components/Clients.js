@@ -5,6 +5,7 @@ import img from "@/img/imgApp/logo.png"
 import FetchingApi from "@/context/FetchingApi"
 //css
 import styles from "@/css/Clients.module.css"
+import style_card from "@/css/Card.module.css"
 
 export default async function Clients() {
   const fetchingApi = new FetchingApi()
@@ -16,14 +17,16 @@ export default async function Clients() {
   return (
     <>
       {data.length > 0 && data.map((e, index) =>
-        <article
-          className={styles.card}
-          key={index}>
+        <article key={index} className={`${style_card.card} ${styles.card}`}>
+          <span>
+
+          </span>
           <Image
+            className={styles.img}
             src={img}
-            height={50}
-            width={50}
-            alt="img"
+            height={100}
+            width={100}
+            alt={e.nombre}
           />
           <div>
             <h2>{e.nombre}</h2>

@@ -7,6 +7,7 @@ import { useState } from "react"
 import { useRouter } from "next/navigation"
 import { signIn } from "next-auth/react"
 //css
+import style_card from "@/css/Card.module.css"
 import style_form from "@/css/Form.module.css"
 import style_btn from "@/css/Btn.module.css"
 import style_linkB from "@/css/LinkB.module.css"
@@ -45,15 +46,15 @@ export default function Login() {
   }
 
   return (
-    <form className={style_form.login} onSubmit={loginAcces}>
+    <form className={`${style_card.card} ${style_form.form}`} onSubmit={loginAcces}>
       <h2>Bienvenido</h2>
       <div>
-        <FontAwesomeIcon className={style_form.login_icon} icon={faUser} />
-        <input onChange={(e) => { setCredentials({ ...credentials, username: e.target.value }) }} className={style_form.login_input} type="text" placeholder="Email / Usuario" />
+        <FontAwesomeIcon className={style_form.form_icon} icon={faUser} />
+        <input onChange={(e) => { setCredentials({ ...credentials, username: e.target.value }) }} className={style_form.form_input} type="text" placeholder="Email / Usuario" />
       </div>
       <div>
-        <FontAwesomeIcon className={style_form.login_icon} icon={faKey} />
-        <input onChange={(e) => { setCredentials({ ...credentials, password: e.target.value }) }} className={style_form.login_input} type="password" placeholder="contraseña" />
+        <FontAwesomeIcon className={style_form.form_icon} icon={faKey} />
+        <input onChange={(e) => { setCredentials({ ...credentials, password: e.target.value }) }} className={style_form.form_input} type="password" placeholder="contraseña" />
       </div>
 
       <input className={`${style_btn.btn} ${style_form.btn}`} type="submit" value="Iniciar Sesión" />

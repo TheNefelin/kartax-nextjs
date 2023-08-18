@@ -1,23 +1,18 @@
-.login {
+.form {
 	position: relative;
 	color: var(--colorBase07);
 	text-align: center;
-	border: solid 1px var(--colorBase01);
-	border-radius: 5px;
 	display: grid;
 	gap: 2rem;
 	padding: 2rem 1rem;
-	/* background-color: var(--colorBase04); */
-	background: linear-gradient(135deg, var(--colorBase09), var(--colorBase01));	
-	box-shadow: 0px 0px 15px var(--colorBase01);
 }
 
-.login_icon {
+.form_icon {
 	width: 1rem;
 	color: var(--colorBase07);
 }
 
-.login_input {
+.form_input {
 	color: var(--colorBase02);;
 	border: none;
 	border-bottom: 2px solid var(--colorBase02);
@@ -29,23 +24,23 @@
 	transition: .2s;
 }
 
-.login_input:active,
-.login_input:focus,
-.login_input:hover {
+.form_input:active,
+.form_input:focus,
+.form_input:hover {
 	outline: none;
 	border-bottom-color: var(--colorBase07);
 }
 
-.login_input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+.form_input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
 	color: var(--colorBase02);
 	opacity: 1; /* Firefox */
 }
   
-.login_input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+.form_input:-ms-input-placeholder { /* Internet Explorer 10-11 */
 	color: var(--colorBase02);
 }
   
-.login_input::-ms-input-placeholder { /* Microsoft Edge */
+.form_input::-ms-input-placeholder { /* Microsoft Edge */
 	color: var(--colorBase02);
 }
 
