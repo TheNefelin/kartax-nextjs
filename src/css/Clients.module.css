@@ -1,5 +1,5 @@
 .card {
-    color: white;
+    color: var(--colorBase02);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -12,6 +12,19 @@
             box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 }
 
+.card h2 {
+    color: var(--colorBase07);
+}
+
+.card section {
+    display: grid;
+}
+
+.link {
+    display: flex;
+    flex-direction: row;
+}
+
 .img {
     background-color: white;
     margin: 1rem;
@@ -20,13 +33,12 @@
 
 .map {
     border: 0;
-    height: 10rem;
     width: 100%;
+    max-width: 20rem;
 }
 
 @media screen and (min-width: 500px){
     .map {
         width: 100%;
-        max-width: 20rem;
     }
 }
