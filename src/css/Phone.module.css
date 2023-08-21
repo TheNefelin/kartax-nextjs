@@ -19,6 +19,7 @@
     align-items: center;
     box-shadow: 30px 50px 100px var(--colorBase03);
 }
+
 .content {
     border: 1px solid var(--colorBase02);
     border-radius: 20px;

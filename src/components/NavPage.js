@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { useState } from 'react'
-import { Raleway } from 'next/font/google'
+import { Permanent_Marker, Raleway } from 'next/font/google'
 import { signOut, useSession } from 'next-auth/react'
 //componentes
 import BurgerBtn from './BurgerBtn'
@@ -14,8 +14,13 @@ import style_linkC from '@/css/LinkC.module.css'
 //img
 import logo from '@/img/imgApp/logo.png'
 
+const pmarker = Permanent_Marker({
+  weight: '400',
+  subsets: ['latin']
+})
+
 const raleway = Raleway({
-  weight: '700',
+  weight: '400',
   subsets: ['latin']
 })
 
@@ -47,7 +52,7 @@ export default function NavPage() {
               width={50}
               alt='logo'
             />
-            <h1 className={raleway.className}>{"Kartax"}</h1>
+            <h1 className={pmarker.className}>{"Kartax"}</h1>
           </Link>
 
           <span onClick={burger_click} className={styles.burger_visible}>
@@ -66,7 +71,6 @@ export default function NavPage() {
         <>
           <Link onClick={burger_reset} href="/dashboard" className={styles.logo}>
             <Image
-              
               src={session.user.image}
               height={50}
               width={50}
