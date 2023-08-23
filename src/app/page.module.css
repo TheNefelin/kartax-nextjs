@@ -1,3 +1,20 @@
 .section {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem;
+}
+
+.title {
+  display: grid;
+  gap: 1rem;
+}
+
+.title h1 {
+  max-width: 30rem;
+  color: var(--colorBase07);
+  text-shadow: 0 0 3px var(--colorBase01), 0 0 5px var(--colorBase01);
+  /* font-weight: 900; */
 }
