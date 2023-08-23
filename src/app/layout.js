@@ -5,6 +5,7 @@ import './globals.css'
 //componentes
 import Provider from '@/context/Provider'
 import NavPage from '@/components/NavPage'
+import Footer from '@/components/Footer'
 //img
 import img from "@/img/imgApp/backgound_03.jpg"
 
@@ -32,6 +33,7 @@ export default function RootLayout({ children }) {
           />
           {children}
         </Provider>
+        <Footer></Footer>
       </body>
     </html>
   )

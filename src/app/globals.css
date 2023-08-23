@@ -16,6 +16,10 @@
   margin: 0;
 }
 
+body {
+  height: 100vh;
+}
+
 body::-webkit-scrollbar{
   display: none;
 }
