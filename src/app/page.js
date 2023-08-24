@@ -11,13 +11,13 @@ export default function Home() {
       <section className={styles.section}>
         <div className={styles.title}>
           <h1>Utiliza Nuestra App para Gestionar Pedidos desde la Mesa del Cliente</h1>
-          <h3>funcionalidades Gratuitas (gt)</h3>
+          <h3>Funcionalidades Gratuitas (gt)</h3>
           <ul>
             <li>Administrar 1 Negocio</li>
             <li>Configuración Dashboard para Admin</li>
             <li>Configuración Dashboard para Usuario</li>
             <li>Mapeo de distribución de las mesas desde el Dashboard</li>
-            <li>QR por mesa que pueda realizar pedidos</li>
+            <li>QR por mesa para realizar pedidos</li>
             <li>Otros...</li>
           </ul>
           <Link
