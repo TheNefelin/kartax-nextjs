@@ -41,6 +41,7 @@
         backdrop-filter: blur(10px);
         display: grid;
         transition: 0.3s;
+        border-radius: 0 0 5px 5px;
     }
 
     .nav_links_visible {
