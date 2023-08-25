@@ -43,7 +43,7 @@ export default function NavPage() {
   
   return (
     <section className={styles.nav}>
-      {status === "unauthenticated" &&
+      {status !== "authenticated" &&
         <>
           <Link onClick={burger_reset} href="/" className={styles.logo}>
             <Image
