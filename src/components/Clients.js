@@ -21,15 +21,15 @@ export default async function Clients() {
             <Image
               className={styles.img}
               src={img}
-              height={100}
-              width={100}
+              height={110}
+              width={110}
               alt={e.nombre}
             />
-            <section>
+            <div>
               <h2>{e.nombre}</h2>
               <p>{e.direccion}</p>
               <p>{e.descripcion}</p>
-            </section>
+            </div>
           </Link>
           <iframe
             className={styles.map}
