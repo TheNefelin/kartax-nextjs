@@ -1,0 +1,30 @@
+
+
+.card_left,
+.card_right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    padding: 2rem 0;
+}
+
+.card_left {
+    flex-wrap: wrap;
+}
+
+.card_right {
+    flex-wrap: wrap-reverse;
+}
+
+.ul,
+.card_left > ul,
+.card_right > ul {
+    list-style: none;
+}
+
+.card_left > ul,
+.card_right > ul {
+    color: var(--colorBase02);
+}
+

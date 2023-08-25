@@ -1,4 +1,4 @@
-.section {
+.free {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -7,22 +7,43 @@
   margin: 1rem;
 }
 
-.banner {
+.free > div {
   display: grid;
   gap: 1rem;
 }
 
-.banner h1 {
+.free h1 {
   max-width: 30rem;
   color: var(--colorBase07);
   text-shadow: 0 0 3px var(--colorBase01), 0 0 5px var(--colorBase01);
   /* font-weight: 900; */
 }
 
-.banner ul {
-  list-style: none;
-}
 
 .btn {
   text-align: center;
+}
+
+.paid {
+  display: grid;
+  justify-content: center;
+  margin-top: 2rem;
+  padding: 1rem;
+  position: absolute;
+  width: 100%;
+  background-color: var(--colorBase07);
+}
+
+.paid div {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+  padding: 2rem 0;
+}
+
+.paid h1 {
+  color: var(--colorBase02);
+  text-shadow: 0 0 3px var(--colorBase01), 0 0 5px var(--colorBase01);
+  padding: 1rem;
 }

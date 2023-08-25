@@ -1,25 +1,31 @@
 import Link from "next/link"
+import Image from "next/image"
 //css 
 import styles from "./page.module.css"
 //componentes
 import Phone from "@/components/Phone"
 import Btn from "@/components/Btn"
+import CardList, {CardListLeft, CardListRight} from "@/components/CardList"
+//img
+import img from "@/img/imgApp/dev01.png"
+
+const listaEjemplo = [
+  "under development",
+  "This is under development to",
+  "Still under development",
+  "under development",
+  "This is under development to",
+  "Still under development",
+]
 
 export default function Home() {
   return (
     <main>
-      <section className={styles.section}>
-        <div className={styles.banner}>
+      <section className={styles.free}>
+        <div>
           <h1>Utiliza Nuestra App para Gestionar Pedidos desde la Mesa del Cliente</h1>
           <h3>Funcionalidades Gratuitas (gt)</h3>
-          <ul>
-            <li>&#10003; Administrar 1 Negocio</li>
-            <li>&#10003; Configuración Dashboard para Admin</li>
-            <li>&#10003; Configuración Dashboard para Usuario</li>
-            <li>&#10003; Mapeo de distribución de las mesas desde el Dashboard</li>
-            <li>&#10003; QR por mesa para realizar pedidos</li>
-            <li>&#10003; Otros...</li>
-          </ul>
+          <CardList></CardList>
           <Link
             className={styles.btn}
             target="_blank"
@@ -29,6 +35,11 @@ export default function Home() {
           </Link>
         </div>
         <Phone></Phone>
+      </section>
+      <section className={styles.paid}>
+        <h1>Otros beneficiarios con la extensión de pago bla bla bla...</h1>
+        <CardListLeft lista={listaEjemplo}></CardListLeft>
+        <CardListRight lista={listaEjemplo}></CardListRight>
       </section>
     </main>
   )

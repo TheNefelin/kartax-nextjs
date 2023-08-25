@@ -8,6 +8,8 @@
   --colorBase07: rgb(252, 161, 32); /*color03*/
   --colorBase08: rgb(0, 255, 255);  /*color04*/
   --colorBase09: rgb(126, 126, 126);
+  --colorBase10: rgb(80, 95, 121);
+  --colorBase11: rgba(252, 161, 32, 0.5);
 }
 
 * {
@@ -17,7 +19,7 @@
 }
 
 body {
-  height: 100vh;
+  color: var(--colorBase10);
 }
 
 body::-webkit-scrollbar{
