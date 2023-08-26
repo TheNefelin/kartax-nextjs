@@ -18,6 +18,10 @@
   margin: 0;
 }
 
+html {
+  font-size: 16px;
+}
+
 body {
   color: var(--colorBase10);
   height: 100vh;
@@ -41,6 +45,10 @@ a {
 }
 
 @media screen and (max-width: 600px){
+  html {
+    font-size: 14px;
+  }
+
   .side-nav{
       display:block;
   }
