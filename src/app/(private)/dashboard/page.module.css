@@ -1,24 +1,4 @@
 .dashboard {
     display: flex;
     height: 100%;
-    width: 100%;
-}
-
-.dashboard span {
-    color: var(--colorBase07);
-    background-color: var(--colorBase04);
-    width: 5rem;
-}
-
-.dashboard div {
-    width: 100%;
-}
-
-.icon {
-    height: 3rem;
-}
-
-.burger {
-    width: 3rem;
-    padding: 1rem;
 }

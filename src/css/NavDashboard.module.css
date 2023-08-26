@@ -1,0 +1,16 @@
+.menu {
+    display: flex;
+    flex-direction: column;
+    color: var(--colorBase07);
+    background-color: var(--colorBase03);
+    width: 5rem;
+    height: 100%;
+}
+
+.burger {
+    margin: 1rem auto;
+}
+
+.icon {
+    height: 3rem;
+}
