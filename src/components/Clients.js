@@ -1,5 +1,8 @@
+//components
 import Image from "next/image"
 import Link from "next/link"
+import MyLoading from '@/components/MyLoading'
+import { Suspense } from 'react'
 //img
 import img from "@/img/imgApp/logo.png"
 //fetching class
@@ -12,12 +15,12 @@ export default async function Clients() {
   const fetchingApi = new FetchingApi()
   const result = await fetchingApi.get_clients()
   const data = await result.json()
-  
+
   return (
-    <>
+    <Suspense fallback={<MyLoading></MyLoading>}>
       {data.length > 0 && data.map((e, index) =>
         <article key={index} className={`${style_card.card} ${styles.card}`}>
-          <Link href={"#"} className={styles.link}> 
+          <Link href={"#"} className={styles.link}>
             <Image
               className={styles.img}
               src={img}
@@ -38,6 +41,6 @@ export default async function Clients() {
           />
         </article>
       )}
-    </>
+    </Suspense>
   )
 }

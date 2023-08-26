@@ -20,6 +20,7 @@
 
 body {
   color: var(--colorBase10);
+  height: 100vh;
 }
 
 body::-webkit-scrollbar{
