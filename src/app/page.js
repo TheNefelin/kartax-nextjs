@@ -1,13 +1,10 @@
 import Link from "next/link"
-import Image from "next/image"
 //css 
 import styles from "./page.module.css"
 //componentes
 import Phone from "@/components/Phone"
 import Btn from "@/components/Btn"
 import CardList, {CardListLeft, CardListRight} from "@/components/CardList"
-//img
-import img from "@/img/imgApp/dev01.png"
 
 const listaEjemplo = [
   "under development",
