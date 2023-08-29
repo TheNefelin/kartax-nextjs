@@ -1,24 +1,25 @@
 .link {
-    color: var(--colorBase02);
-    display: inline-block;
-    padding: 10px;
+  color: var(--colorBase02);
+  display: inline-block;
+  padding: 10px;
 }
 
 .link::after {
-    content: "";
-    display: block;
-    height: 4px;
-    width: 100%;
-    background-color: var(--colorBase07);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.3s ease;
+  content: "";
+  display: block;
+  height: 4px;
+  width: 100%;
+  background-color: var(--colorBase07);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
 }
 
 .link:hover {
-    color: var(--colorBase07);;
+  color: var(--colorBase07);
+  ;
 }
 
 .link:hover::after {
-    transform: scaleX(1);
+  transform: scaleX(1);
 }

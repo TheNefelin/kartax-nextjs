@@ -33,7 +33,6 @@ export default function NavDashboard() {
   const menu_css = !burgerState? styles.menu : `${styles.menu} ${styles.menu_active}` 
 
   const burger_click = () => {
-    console.log(burgerState)
     setBurgerState(!burgerState)
   }
 
@@ -47,6 +46,8 @@ export default function NavDashboard() {
         <BurgerBtn isClick={burgerState}></BurgerBtn>
       </div>
 
+      <hr></hr>
+      
       <Link onClick={item_click} className={styles.link} href={"/dashboard/resume"}>
         <FontAwesomeIcon icon={faDesktop} className={styles.icon}>asd</FontAwesomeIcon>
         <p>Resumen</p>

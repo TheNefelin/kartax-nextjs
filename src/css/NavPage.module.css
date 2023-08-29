@@ -1,54 +1,62 @@
 .nav {
-    position: relative;
-    background-color: var(--colorBase04);
-    background: linear-gradient(45deg, var(--colorBase04), var(--colorBase01));
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 4rem;
-    padding: 1rem;
-    border-bottom: solid 1px var(--colorBase07);
+  position: relative;
+  background-color: var(--colorBase04);
+  background: linear-gradient(45deg, var(--colorBase04), var(--colorBase01));
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
+  padding: 1rem;
+  border-bottom: solid 1px var(--colorBase07);
 }
 
 .logo {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    color: var(--colorBase07);
-    font-size: 1.5rem;
-    text-shadow: 0 0 3px var(--colorBase01), 0 0 5px var(--colorBase01);
-    animation: colores 10s infinite;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--colorBase07);
+  font-size: 1.5rem;
+  text-shadow: 0 0 3px var(--colorBase01), 0 0 5px var(--colorBase01);
+  animation: colores 10s infinite;
 }
 
 .burger_visible {
-    display: none;
+  display: none;
 }
 
 @keyframes colores {
-    0%   {color: var(--colorBase07);}
-    50%  {color: var(--colorBase02);}
-    100% {color: var(--colorBase07);}
+  0% {
+    color: var(--colorBase07);
+  }
+
+  50% {
+    color: var(--colorBase02);
+  }
+
+  100% {
+    color: var(--colorBase07);
+  }
 }
 
-@media screen and (max-width: 600px){
-    .nav_links{
-        z-index: 1;
-        position: fixed;
-        top: 4rem;
-        left: 0;
-        width: 100%;
-        background-color: var(--colorBase04);
-        backdrop-filter: blur(10px);
-        display: grid;
-        transition: 0.3s;
-        border-radius: 0 0 5px 5px;
-    }
+@media (width < 600px) {
+  .nav_links {
+    z-index: 1;
+    position: fixed;
+    top: 4rem;
+    left: 0;
+    width: 100%;
+    background-color: var(--colorBase04);
+    backdrop-filter: blur(10px);
+    display: grid;
+    transition: 0.3s;
+    border-radius: 0 0 5px 5px;
+  }
 
-    .nav_links_visible {
-        left: 100%;
-    }
+  .nav_links_visible {
+    left: 100%;
+  }
 
-    .burger_visible {
-        display: block;
-    }
- }
+  .burger_visible {
+    display: block;
+  }
+}

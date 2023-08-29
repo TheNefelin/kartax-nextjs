@@ -1,15 +1,15 @@
 .footer {
-    position: fixed;
-    bottom: 0;
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    background-color: var(--colorBase01);
-    color: var(--colorBase02);
-    padding: 0.5rem 0;
-    font-size: small;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--colorBase01);
+  color: var(--colorBase02);
+  padding: 0.5rem 0;
+  font-size: small;
 }

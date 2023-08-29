@@ -1,12 +1,12 @@
 .link {
-    padding: 0.5rem;
-    background-color: var(--colorBase07);
-    border-radius: 5px;
-    color: var(--colorBase02);
-    transition: 0.3s;
+  padding: 0.5rem;
+  background-color: var(--colorBase07);
+  border-radius: 5px;
+  color: var(--colorBase02);
+  transition: 0.3s;
 }
 
 .link:hover {
-    background-color: var(--colorBase04);
-    color: var(--colorBase02);
+  background-color: var(--colorBase04);
+  color: var(--colorBase02);
 }
