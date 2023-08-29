@@ -43,7 +43,7 @@ export default function NavDashboard() {
 
   return (
     <span className={menu_css}>
-      <div onClick={setBurgerState} className={styles.burger}>
+      <div onClick={burger_click} className={styles.burger}>
         <BurgerBtn isClick={burgerState}></BurgerBtn>
       </div>
 
