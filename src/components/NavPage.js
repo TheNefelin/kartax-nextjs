@@ -27,7 +27,7 @@ const raleway = Raleway({
 export default function NavPage() {
   const { data: session, status } = useSession()
   const [estadoBurger, setEstadoBurger] = useState(false)
-  const menu_links = !estadoBurger ? `${styles.nav_links} ${styles.nav_links_visible}` : styles.nav_links
+  const menu_links_css = !estadoBurger ? `${styles.nav_links} ${styles.nav_links_visible}` : styles.nav_links
 
   const burger_click = () => {
     setEstadoBurger(!estadoBurger)
@@ -59,7 +59,7 @@ export default function NavPage() {
             <BurgerBtn isClick={estadoBurger} ></BurgerBtn>
           </span>
 
-          <div className={menu_links}>
+          <div className={menu_links_css}>
             {/* <Link onClick={burger_reset} className={style_linkA.link} rel="prefetch" href="#">RRSS</Link> */}
             <Link onClick={burger_reset} className={style_linkA.link} rel="prefetch" href="/clientes">Clientes</Link>
             <Link onClick={burger_reset} className={style_linkA.link} rel="prefetch" href="/encuesta">Encuesta</Link>
@@ -83,7 +83,7 @@ export default function NavPage() {
             <BurgerBtn isClick={estadoBurger} ></BurgerBtn>
           </span>
 
-          <div className={menu_links}>
+          <div className={menu_links_css}>
             <Link onClick={cerrarSesion} className={style_linkC.link} rel="prefetch" href="/#">Cerrar Sesión</Link>
           </div>
         </>

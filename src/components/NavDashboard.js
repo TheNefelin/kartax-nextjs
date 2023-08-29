@@ -1,10 +1,12 @@
+"use client"
+
 import Link from "next/link"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import 
 { 
+  faCashRegister,
   faUserGear, 
   faKey, 
-  faBook, 
   faBarcode, 
   faGear, 
   faGears, 
@@ -23,31 +25,102 @@ import
 import styles from "@/css/NavDashboard.module.css"
 //components
 import BurgerBtn from "@/components/BurgerBtn"
+import { useState } from "react"
 
 export default function NavDashboard() {
+  const [burgerState, setBurgerState] = useState(false)
+
+  const menu_css = !burgerState? styles.menu : `${styles.menu} ${styles.menu_active}` 
+
+  const burger_click = () => {
+    console.log(burgerState)
+    setBurgerState(!burgerState)
+  }
+
+  const item_click = () => {
+    setBurgerState(false)
+  }
+
   return (
-    <span className={styles.menu}>
-      <div className={styles.burger}>
-        <BurgerBtn isClick={false}></BurgerBtn>
+    <span className={menu_css}>
+      <div onClick={setBurgerState} className={styles.burger}>
+        <BurgerBtn isClick={burgerState}></BurgerBtn>
       </div>
-      <FontAwesomeIcon icon={faUserGear} className={styles.icon}></FontAwesomeIcon>
-      <FontAwesomeIcon icon={faKey} className={styles.icon}></FontAwesomeIcon>
-      <FontAwesomeIcon icon={faBook} className={styles.icon}></FontAwesomeIcon>
-      <FontAwesomeIcon icon={faBarcode} className={styles.icon}></FontAwesomeIcon>
-      <FontAwesomeIcon icon={faGear} className={styles.icon}></FontAwesomeIcon>
-      <FontAwesomeIcon icon={faGears} className={styles.icon}></FontAwesomeIcon>
-      <FontAwesomeIcon icon={faTruck} className={styles.icon}></FontAwesomeIcon>
-      <FontAwesomeIcon icon={faPalette} className={styles.icon}></FontAwesomeIcon>
-      <FontAwesomeIcon icon={faUsersGear} className={styles.icon}></FontAwesomeIcon>
-      <FontAwesomeIcon icon={faPencil} className={styles.icon}></FontAwesomeIcon>
-      <FontAwesomeIcon icon={faDesktop} className={styles.icon}></FontAwesomeIcon>
-      <FontAwesomeIcon icon={faSquarePollVertical} className={styles.icon}></FontAwesomeIcon>
-      <FontAwesomeIcon icon={faMobileScreenButton} className={styles.icon}></FontAwesomeIcon>
-      <FontAwesomeIcon icon={faMapLocationDot} className={styles.icon}></FontAwesomeIcon>
-      <FontAwesomeIcon icon={faChartLine} className={styles.icon}></FontAwesomeIcon>
-      <FontAwesomeIcon icon={faCircleQuestion} className={styles.icon}></FontAwesomeIcon>
-      <Link href={"/dashboard/resume"}>OOOTRA PRUEBA</Link>
-      <Link href={"/dashboard/resume"}>OOOTRA PRUEBA</Link>
+
+      <Link onClick={item_click} className={styles.link} href={"/dashboard/resume"}>
+        <FontAwesomeIcon icon={faDesktop} className={styles.icon}>asd</FontAwesomeIcon>
+        <p>Resumen</p>
+      </Link>
+      <Link onClick={item_click} className={styles.link} href={"/dashboard/resume"}>
+        <FontAwesomeIcon icon={faMobileScreenButton} className={styles.icon}></FontAwesomeIcon>
+        <p>App</p>
+      </Link>
+
+      <hr></hr>
+
+      <Link onClick={item_click} className={styles.link} href={"/dashboard/resume"}>
+        <FontAwesomeIcon icon={faCashRegister} className={styles.icon}></FontAwesomeIcon>
+        <p>Caja</p>
+      </Link>
+      <Link onClick={item_click} className={styles.link} href={"/dashboard/resume"}>
+        <FontAwesomeIcon icon={faChartLine} className={styles.icon}></FontAwesomeIcon>
+        <p>Estadística</p>
+      </Link>
+      <Link onClick={item_click} className={styles.link} href={"/dashboard/resume"}>
+        <FontAwesomeIcon icon={faBarcode} className={styles.icon}></FontAwesomeIcon>
+        <p>Etiquetas</p>
+      </Link>
+      <Link onClick={item_click} className={styles.link} href={"/dashboard/resume"}>
+        <FontAwesomeIcon icon={faPencil} className={styles.icon}></FontAwesomeIcon>
+        <p>Negocios</p>
+      </Link>
+      <Link onClick={item_click} className={styles.link} href={"/dashboard/resume"}>
+        <FontAwesomeIcon icon={faUsersGear} className={styles.icon}></FontAwesomeIcon>
+        <p>Usuarios</p>
+      </Link>
+
+      <hr></hr>
+
+      <Link onClick={item_click} className={styles.link} href={"/dashboard/resume"}>
+        <FontAwesomeIcon icon={faUserGear} className={styles.icon}></FontAwesomeIcon>
+        <p>Usuario</p>
+      </Link>
+      <Link onClick={item_click} className={styles.link} href={"/dashboard/resume"}>
+        <FontAwesomeIcon icon={faKey} className={styles.icon}></FontAwesomeIcon>
+        <p>Contraseña</p>
+      </Link>
+      <Link onClick={item_click} className={styles.link} href={"/dashboard/resume"}>
+        <FontAwesomeIcon icon={faGears} className={styles.icon}></FontAwesomeIcon>
+        <p>Configuración</p>
+      </Link>
+      <Link onClick={item_click} className={styles.link} href={"/dashboard/resume"}>
+        <FontAwesomeIcon icon={faCircleQuestion} className={styles.icon}></FontAwesomeIcon>
+        <p>...</p>
+      </Link>
+
+      <hr></hr>
+
+      <Link onClick={item_click} className={styles.link} href={"/dashboard/resume"}>
+        <FontAwesomeIcon icon={faMapLocationDot} className={styles.icon}></FontAwesomeIcon>
+        <p>XXX</p>
+      </Link>
+      <Link onClick={item_click} className={styles.link} href={"/dashboard/resume"}>
+        <FontAwesomeIcon icon={faSquarePollVertical} className={styles.icon}></FontAwesomeIcon>
+        <p>XXX</p>
+      </Link>
+      <Link onClick={item_click} className={styles.link} href={"/dashboard/resume"}>
+        <FontAwesomeIcon icon={faGear} className={styles.icon}></FontAwesomeIcon>
+        <p>XXX</p>
+      </Link>
+      <Link onClick={item_click} className={styles.link} href={"/dashboard/resume"}>
+        <FontAwesomeIcon icon={faTruck} className={styles.icon}></FontAwesomeIcon>
+        <p>XXX</p>
+      </Link>
+      <Link onClick={item_click} className={styles.link} href={"/dashboard/resume"}>
+        <FontAwesomeIcon icon={faPalette} className={styles.icon}></FontAwesomeIcon>
+        <p>XXX</p>
+      </Link>
+
     </span>
   )
 }
