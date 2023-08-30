@@ -4,6 +4,7 @@ import Link from "next/link"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import 
 { 
+  faHome,
   faCashRegister,
   faUserGear, 
   faKey, 
@@ -47,7 +48,11 @@ export default function NavDashboard() {
       </div>
 
       <hr></hr>
-      
+
+      <Link onClick={item_click} className={styles.link} href={"/dashboard/resume"}>
+        <FontAwesomeIcon icon={faHome} className={styles.icon}>asd</FontAwesomeIcon>
+        <p>Resumen</p>
+      </Link>      
       <Link onClick={item_click} className={styles.link} href={"/dashboard/resume"}>
         <FontAwesomeIcon icon={faDesktop} className={styles.icon}>asd</FontAwesomeIcon>
         <p>Resumen</p>
