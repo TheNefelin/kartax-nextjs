@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import { useState } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import 
 { 
@@ -26,7 +27,6 @@ import
 import styles from "@/css/NavDashboard.module.css"
 //components
 import BurgerBtn from "@/components/BurgerBtn"
-import { useState } from "react"
 
 export default function NavDashboard() {
   const [burgerState, setBurgerState] = useState(false)
@@ -51,12 +51,12 @@ export default function NavDashboard() {
 
       <Link onClick={item_click} className={styles.link} href={"/dashboard/resume"}>
         <FontAwesomeIcon icon={faHome} className={styles.icon}>asd</FontAwesomeIcon>
-        <p>Resumen</p>
-      </Link>      
+        <p>Inicio</p>
+      </Link>  
       <Link onClick={item_click} className={styles.link} href={"/dashboard/resume"}>
-        <FontAwesomeIcon icon={faDesktop} className={styles.icon}>asd</FontAwesomeIcon>
-        <p>Resumen</p>
-      </Link>
+        <FontAwesomeIcon icon={faCashRegister} className={styles.icon}></FontAwesomeIcon>
+        <p>Caja</p>
+      </Link>    
       <Link onClick={item_click} className={styles.link} href={"/dashboard/resume"}>
         <FontAwesomeIcon icon={faMobileScreenButton} className={styles.icon}></FontAwesomeIcon>
         <p>App</p>
@@ -64,19 +64,7 @@ export default function NavDashboard() {
 
       <hr></hr>
 
-      <Link onClick={item_click} className={styles.link} href={"/dashboard/resume"}>
-        <FontAwesomeIcon icon={faCashRegister} className={styles.icon}></FontAwesomeIcon>
-        <p>Caja</p>
-      </Link>
-      <Link onClick={item_click} className={styles.link} href={"/dashboard/resume"}>
-        <FontAwesomeIcon icon={faChartLine} className={styles.icon}></FontAwesomeIcon>
-        <p>Estadística</p>
-      </Link>
-      <Link onClick={item_click} className={styles.link} href={"/dashboard/resume"}>
-        <FontAwesomeIcon icon={faBarcode} className={styles.icon}></FontAwesomeIcon>
-        <p>Etiquetas</p>
-      </Link>
-      <Link onClick={item_click} className={styles.link} href={"/dashboard/resume"}>
+      <Link onClick={item_click} className={styles.link} href={"/dashboard/bussines"}>
         <FontAwesomeIcon icon={faPencil} className={styles.icon}></FontAwesomeIcon>
         <p>Negocios</p>
       </Link>
@@ -94,10 +82,6 @@ export default function NavDashboard() {
       <Link onClick={item_click} className={styles.link} href={"/dashboard/resume"}>
         <FontAwesomeIcon icon={faKey} className={styles.icon}></FontAwesomeIcon>
         <p>Contraseña</p>
-      </Link>
-      <Link onClick={item_click} className={styles.link} href={"/dashboard/resume"}>
-        <FontAwesomeIcon icon={faGears} className={styles.icon}></FontAwesomeIcon>
-        <p>Configuración</p>
       </Link>
       <Link onClick={item_click} className={styles.link} href={"/dashboard/resume"}>
         <FontAwesomeIcon icon={faCircleQuestion} className={styles.icon}></FontAwesomeIcon>
@@ -126,7 +110,22 @@ export default function NavDashboard() {
         <FontAwesomeIcon icon={faPalette} className={styles.icon}></FontAwesomeIcon>
         <p>XXX</p>
       </Link>
-
+      <Link onClick={item_click} className={styles.link} href={"/dashboard/resume"}>
+        <FontAwesomeIcon icon={faDesktop} className={styles.icon}>asd</FontAwesomeIcon>
+        <p>Resumen</p>
+      </Link>
+      <Link onClick={item_click} className={styles.link} href={"/dashboard/resume"}>
+        <FontAwesomeIcon icon={faGears} className={styles.icon}></FontAwesomeIcon>
+        <p>Configuración</p>
+      </Link>
+      <Link onClick={item_click} className={styles.link} href={"/dashboard/resume"}>
+        <FontAwesomeIcon icon={faChartLine} className={styles.icon}></FontAwesomeIcon>
+        <p>Estadística</p>
+      </Link>
+      <Link onClick={item_click} className={styles.link} href={"/dashboard/resume"}>
+        <FontAwesomeIcon icon={faBarcode} className={styles.icon}></FontAwesomeIcon>
+        <p>Etiquetas</p>
+      </Link>
     </span>
   )
 }
