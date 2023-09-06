@@ -6,7 +6,9 @@ import styles from "./page.module.css"
 export default function DashboardLayout({ children, props }) {
   return (
     <div className={styles.dashboard}>
-      <NavDashboard></NavDashboard>
+      <menu className={styles.menu}>
+        <NavDashboard></NavDashboard>
+      </menu>
       {children}
     </div>
   )
