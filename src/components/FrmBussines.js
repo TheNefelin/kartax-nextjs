@@ -4,14 +4,12 @@
 import Image from "next/image"
 import { useState } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faBuilding, faLocationDot } from "@fortawesome/free-solid-svg-icons"
+import { faBuilding, faLocationDot, faArrowRight } from "@fortawesome/free-solid-svg-icons"
 //css
 import styles from "@/css/Bussines.module.css"
 import style_form from "@/css/Form.module.css"
 import style_card from "@/css/Card.module.css"
 import style_btn from "@/css/Btn.module.css"
-//fetching class
-import FetchingApi from "@/context/FetchingApi"
 
 export default function Bussines() {
   const [imagen, setImagen] = useState(null)
@@ -30,9 +28,6 @@ export default function Bussines() {
     }
   }
 
-  const fetchingApi = new FetchingApi()
-  const res = fetchingApi.get_business_byid_user(1)
-
   return (
     <form className={`${style_card.card} ${style_form.form}`}>
       <h2>Negocio</h2>
@@ -49,11 +44,27 @@ export default function Bussines() {
 
       <div>
         <FontAwesomeIcon className={style_form.form_icon} icon={faBuilding} />
-        <input className={style_form.form_input} type="text" placeholder="Nombres" />
+        <input className={style_form.form_input} type="text" placeholder="Nombres Negocio" />
       </div>
 
       <div>
-        <textarea className={style_form.form_input} placeholder="Google Map Link"></textarea>
+        <FontAwesomeIcon className={style_form.form_icon} icon={faBuilding} />
+        <input className={style_form.form_input} type="text" placeholder="Rut Negocio" />
+      </div>
+
+      <div>
+        <FontAwesomeIcon className={style_form.form_icon} icon={faBuilding} />
+        <input className={style_form.form_input} type="text" placeholder="Dirección Negocio" />
+      </div>
+
+      <div>
+        <FontAwesomeIcon className={style_form.form_icon} icon={faArrowRight} />
+        <textarea className={style_form.form_input} type="text" placeholder="Descripción Negocio" />
+      </div>
+
+      <div>
+        <FontAwesomeIcon className={style_form.form_icon} icon={faArrowRight} />
+        <textarea className={style_form.form_input} type="text" placeholder="Google Map Link"></textarea>
       </div>
 
       <div>
