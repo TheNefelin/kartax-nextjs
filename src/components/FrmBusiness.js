@@ -6,12 +6,11 @@ import { useState } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBuilding, faLocationDot, faArrowRight } from "@fortawesome/free-solid-svg-icons"
 //css
-import styles from "@/css/Bussines.module.css"
 import style_form from "@/css/Form.module.css"
 import style_card from "@/css/Card.module.css"
 import style_btn from "@/css/Btn.module.css"
 
-export default function Bussines() {
+export default function Business() {
   const [imagen, setImagen] = useState(null)
 
   const loadImg = (e) => {
@@ -74,7 +73,7 @@ export default function Bussines() {
 
       <div>
         <iframe
-          className={styles.map}
+          
           src=""
           loading="lazy"
         />

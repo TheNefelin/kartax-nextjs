@@ -1,5 +1,5 @@
 //components 
-import FrmBussines from "@/components/FrmBussines"
+import FrmBussines from "@/components/FrmBusiness"
 import Table from "@/components/Table"
 //fetching class
 import FetchingApi from "@/context/FetchingApi"
@@ -22,7 +22,7 @@ export default async function page() {
   const myData = await getData(1)
 
   return (
-    <>
+    <section className={styles.business}>
       <section className={styles.frm}>
         <FrmBussines></FrmBussines>
       </section>
@@ -30,6 +30,6 @@ export default async function page() {
       <Table tabla={myData[0]}></Table>
       <Table tabla={myData[1]}></Table>
       <Table tabla={myData[2]}></Table>
-    </>
+    </section>
   )
 }
