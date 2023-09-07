@@ -28,8 +28,8 @@ export default function Table(props) {
       <table className={styles.table}>
         <thead>
           <tr>
-            {columnas.map(columna => (
-              <th>{columna}</th>
+            {columnas.map((columna, index) => (
+              <th key={index}>{columna}</th>
             ))}
             <th>modificar</th>
           </tr>
