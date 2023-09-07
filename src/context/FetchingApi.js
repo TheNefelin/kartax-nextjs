@@ -13,7 +13,16 @@ export default class FetchingApi {
   //user
   async get_user_all() {return await fnFetching(`${this._api}/usuario/`, get_public())}
   async get_user_byid(id) {return await fnFetching(`${this._api}/usuario/${id}`, get_public())}
-  //panel
+  //panel --------------------------------------------------------------------------------------
+  //business
+  async get_business_byid_user(id) {return await fnFetching(`${this._api}/negocio/por-usuario/${id}`, get_public())}
+  //item-grp
+  async get_items_grp_byid_business(id) {return await fnFetching(`${this._api}/item-grp/por-negocio/${id}`, get_public())}
+  //item-categ
+  async get_items_categ_byid_business(id) {return await fnFetching(`${this._api}/item-categ/por-negocio/${id}`, get_public())}
+  //item
+  async get_items_byid_business(id) {return await fnFetching(`${this._api}/item/por-negocio/${id}`, get_public())}
+  //--------------------------------------------------------------------------------------------
 }
 
 //execute all fetching

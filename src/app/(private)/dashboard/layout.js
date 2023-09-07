@@ -9,7 +9,9 @@ export default function DashboardLayout({ children, props }) {
       <menu className={styles.menu}>
         <NavDashboard></NavDashboard>
       </menu>
-      {children}
+      <div className={styles.content}>
+        {children}
+      </div>
     </div>
   )
 }

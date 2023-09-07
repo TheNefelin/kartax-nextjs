@@ -1,49 +1,52 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faPenToSquare } from "@fortawesome/free-solid-svg-icons"
 //css
 import styles from "@/css/Table.module.css"
+//fetching class
+import FetchingApi from "@/context/FetchingApi"
 
-export default function Table() {
+export default function Table(props) {
+  const fetchingApi = new FetchingApi()
+
+  // Promise.all([
+  //   fetchingApi.get_business_byid_user(1).then(data => data.json()),
+  //   fetchingApi.get_items_grp_byid_business(1).then(data => data.json()),
+  //   fetchingApi.get_items_categ_byid_business(1).then(data => data.json()),
+  //   fetchingApi.get_items_byid_business(1).then(data => data.json()),
+  // ]).then(data => {
+  //   console.log(data[0])
+  //   console.log(data[1])
+  //   console.log(data[2])
+  //   console.log(data[3])
+  // })
+
+  const tabla = props.tabla
+  const columnas = Object.keys(tabla[0])
+
   return (
-    <div className={styles.tableWrapper}>
+    <section className={styles.tableWrapper}>
       <table className={styles.table}>
         <thead>
           <tr>
-            <th>Encabezado 1</th>
-            <th>Encabezado 2</th>
-            <th>Encabezado 3</th>
-            <th>Encabezado 4</th>
-            <th>Encabezado 5</th>
-            <th>Encabezado 6</th>
-            <th>Encabezado 7</th>
-            <th>Encabezado 8</th>
-            <th>Encabezado 9</th>
+            {columnas.map(columna => (
+              <th>{columna}</th>
+            ))}
+            <th>modificar</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>Dato 1</td>
-            <td>Dato 2</td>
-            <td>Dato 3</td>
-            <td>Dato 4</td>
-            <td>Dato 5</td>
-            <td>Dato 6</td>
-            <td>Dato 7</td>
-            <td>Dato 8</td>
-            <td>Dato 9</td>
-          </tr>
-          <tr>
-            <td>Dato 1</td>
-            <td>Dato 2</td>
-            <td>Dato 3</td>
-            <td>Dato 4</td>
-            <td>Dato 5</td>
-            <td>Dato 6</td>
-            <td>Dato 7</td>
-            <td>Dato 8</td>
-            <td>Dato 9</td>
-          </tr>
-          {/* Agrega más filas según sea necesario */}
+          {tabla.map((filas, index) => (
+            <tr key={index}>
+              {Object.values(filas).map(e => (
+                <td>{`${e}`}</td>
+              ))}
+              <td>
+                <FontAwesomeIcon icon={faPenToSquare} className={styles.icon}></FontAwesomeIcon>
+              </td>
+            </tr>
+          ))}
         </tbody>
       </table>
-    </div>
+    </section>
   )
 }
