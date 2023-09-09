@@ -22,8 +22,8 @@ export default async function page() {
   const myData = await getData(1)
 
   return (
-    <section className={styles.business}>
-      <section className={styles.frm}>
+    <section className={styles.frm}>
+      <section>
         <FrmBussines></FrmBussines>
       </section>
       <Table tabla={data}></Table>
