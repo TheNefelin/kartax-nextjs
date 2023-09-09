@@ -3,12 +3,17 @@
 	color: var(--colorBase07);
 	text-align: center;
 	display: grid;
-	gap: 2rem;
+	gap: 1rem;
 	padding: 2rem 1rem;
 }
 
 .form_icon {
-	width: 1rem;
+	height: 1rem;
+	color: var(--colorBase07);
+}
+
+.form_icon2 {
+	height: 3rem;
 	color: var(--colorBase07);
 }
 
@@ -17,8 +22,8 @@
 	border: none;
 	border-bottom: 2px solid var(--colorBase02);
 	background: none;
-	padding: 10px;
-	padding-left: 24px;
+	padding: 1rem;
+	padding-left: 2rem;
 	font-weight: 700;
 	width: 75%;
 	transition: .2s;
@@ -59,8 +64,20 @@
 	padding: 0.5rem;
 }
 
-.img {
+.img_load {
   display: grid;
   place-items: center;
   gap: 1rem;
+}
+
+.img_load input[type="file"]{
+  display: none;
+}
+
+.img {
+  object-fit: cover;
+}
+
+.map {
+  width: 100%;
 }

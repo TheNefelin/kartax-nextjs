@@ -22,10 +22,10 @@ export default async function page() {
   const myData = await getData(1)
 
   return (
-    <section className={styles.frm}>
-      <section>
+    <section className={styles.business}>
+      <div>
         <FrmBussines></FrmBussines>
-      </section>
+      </div>
       <Table tabla={data}></Table>
       <Table tabla={myData[0]}></Table>
       <Table tabla={myData[1]}></Table>

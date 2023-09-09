@@ -4,7 +4,7 @@
 import Image from "next/image"
 import { useState } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faBuilding, faLocationDot, faArrowRight } from "@fortawesome/free-solid-svg-icons"
+import { faBuilding, faLocationDot, faArrowRight, faCamera } from "@fortawesome/free-solid-svg-icons"
 //css
 import style_form from "@/css/Form.module.css"
 import style_card from "@/css/Card.module.css"
@@ -31,15 +31,18 @@ export default function Business() {
     <form className={`${style_card.card} ${style_form.form}`}>
       <h2>Negocio</h2>
 
-      <div className={style_form.img}>
+      <label for="inputTag" className={style_form.img_load}>
         {imagen && <Image
+          className={style_form.img}
           src={imagen}
           width={150}
           height={150}
           alt="Prueba"
         ></Image>}
-        <input onChange={loadImg} type="file" name="img" accept="image/png, image/gif, image/jpeg" />
-      </div>
+        <p>Seleccione un Logo (200 x 200)</p>
+        <FontAwesomeIcon className={style_form.form_icon2} icon={faCamera} />
+        <input id="inputTag" onChange={loadImg} type="file" name="img" accept="image/png, image/gif, image/jpeg" />
+      </label>
 
       <div>
         <FontAwesomeIcon className={style_form.form_icon} icon={faBuilding} />
@@ -56,28 +59,26 @@ export default function Business() {
         <input className={style_form.form_input} type="text" placeholder="Dirección Negocio" />
       </div>
 
-      {/* <div>
-        <FontAwesomeIcon className={style_form.form_icon} icon={faArrowRight} />
+      <div>
         <textarea className={style_form.form_input} type="text" placeholder="Descripción Negocio" />
-      </div> */}
+      </div>
 
-      {/* <div>
-        <FontAwesomeIcon className={style_form.form_icon} icon={faArrowRight} />
+      <div>
         <textarea className={style_form.form_input} type="text" placeholder="Google Map Link"></textarea>
-      </div> */}
+      </div>
 
       <div>
         <FontAwesomeIcon className={style_form.form_icon} icon={faLocationDot} />
         <input className={style_form.form_input} type="text" placeholder="Map Link"></input>
       </div>
-{/* 
+      
       <div>
         <iframe
-          
+          className={style_form.map}
           src=""
           loading="lazy"
         />
-      </div> */}
+      </div>
 
       <input className={`${style_btn.btn} ${style_form.btn}`} type="submit" value="Modificar" />
       <input className={`${style_btn.btn} ${style_form.btn}`} type="submit" value="Cerrar" />
