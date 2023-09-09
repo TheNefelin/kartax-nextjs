@@ -64,7 +64,7 @@ export default function NavDashboard() {
 
       <hr></hr>
 
-      <Link onClick={item_click} className={styles.link} href={"/dashboard/bussines"}>
+      <Link onClick={item_click} className={styles.link} href={"/dashboard/business"}>
         <FontAwesomeIcon icon={faPencil} className={styles.icon}></FontAwesomeIcon>
         <p>Negocios</p>
       </Link>
