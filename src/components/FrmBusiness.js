@@ -56,28 +56,28 @@ export default function Business() {
         <input className={style_form.form_input} type="text" placeholder="Dirección Negocio" />
       </div>
 
-      <div>
+      {/* <div>
         <FontAwesomeIcon className={style_form.form_icon} icon={faArrowRight} />
         <textarea className={style_form.form_input} type="text" placeholder="Descripción Negocio" />
-      </div>
+      </div> */}
 
-      <div>
+      {/* <div>
         <FontAwesomeIcon className={style_form.form_icon} icon={faArrowRight} />
         <textarea className={style_form.form_input} type="text" placeholder="Google Map Link"></textarea>
-      </div>
+      </div> */}
 
       <div>
         <FontAwesomeIcon className={style_form.form_icon} icon={faLocationDot} />
         <input className={style_form.form_input} type="text" placeholder="Map Link"></input>
       </div>
-
+{/* 
       <div>
         <iframe
           
           src=""
           loading="lazy"
         />
-      </div>
+      </div> */}
 
       <input className={`${style_btn.btn} ${style_form.btn}`} type="submit" value="Modificar" />
       <input className={`${style_btn.btn} ${style_form.btn}`} type="submit" value="Cerrar" />
