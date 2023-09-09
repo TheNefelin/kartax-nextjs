@@ -46,17 +46,17 @@ export default function Business() {
 
       <div>
         <FontAwesomeIcon className={style_form.form_icon} icon={faBuilding} />
-        <input className={style_form.form_input} type="text" placeholder="Nombres Negocio" />
+        <input className={style_form.form_input} type="text" placeholder="Nombre de Negocio" />
       </div>
 
       <div>
         <FontAwesomeIcon className={style_form.form_icon} icon={faBuilding} />
-        <input className={style_form.form_input} type="text" placeholder="Rut Negocio" />
+        <input className={style_form.form_input} type="text" placeholder="Rut de Negocio" />
       </div>
 
       <div>
         <FontAwesomeIcon className={style_form.form_icon} icon={faBuilding} />
-        <input className={style_form.form_input} type="text" placeholder="Dirección Negocio" />
+        <input className={style_form.form_input} type="text" placeholder="Dirección del Negocio" />
       </div>
 
       <div>
