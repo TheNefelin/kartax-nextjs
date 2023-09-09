@@ -48,6 +48,9 @@
     background-color: var(--colorBase04);
     backdrop-filter: blur(10px);
     display: grid;
+    justify-content: right;
+    text-align: center;
+    padding: 1rem;
     transition: 0.3s;
     border-radius: 0 0 5px 5px;
   }
