@@ -15,14 +15,11 @@ export default function Business() {
 
   const loadImg = (e) => {
     const file = e.target.files[0]
-
     if (file) {
       const reader = new FileReader()
-
       reader.onload = (e) => {
         setImagen(e.target.result)
       }
-
       reader.readAsDataURL(file)
     }
   }
@@ -66,6 +63,8 @@ export default function Business() {
       <div>
         <textarea className={style_form.form_input} type="text" placeholder="Google Map Link"></textarea>
       </div>
+
+      <input className={`${style_btn.btn} ${style_form.btn}`} type="submit" value="Procesar Map Link" />
 
       <div>
         <FontAwesomeIcon className={style_form.form_icon} icon={faLocationDot} />

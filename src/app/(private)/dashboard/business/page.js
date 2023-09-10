@@ -5,6 +5,7 @@ import Table from "@/components/Table"
 import FetchingApi from "@/context/FetchingApi"
 //css
 import styles from "./page.module.css"
+import style_btn from "@/css/Btn.module.css"
 
 export default async function page() {
   const fetchingApi = new FetchingApi()
@@ -23,7 +24,8 @@ export default async function page() {
 
   return (
     <section className={styles.business}>
-      <div>
+      <input className={`${style_btn.btn}`} type="submit" value="&#10010; Nuevo Negocio" />
+      <div className={styles.frm}>
         <FrmBussines></FrmBussines>
       </div>
       <Table tabla={data}></Table>
