@@ -27,7 +27,7 @@ export default function Business() {
   return (
     <form className={`${style_card.card} ${style_form.form}`}>
       <h2>Negocio</h2>
-
+{/* 
       <label for="inputTag" className={style_form.img_load}>
         {imagen && <Image
           className={style_form.img}
@@ -39,7 +39,7 @@ export default function Business() {
         <p>Seleccione un Logo (200 x 200)</p>
         <FontAwesomeIcon className={style_form.form_icon2} icon={faCamera} />
         <input id="inputTag" onChange={loadImg} type="file" name="img" accept="image/png, image/gif, image/jpeg" />
-      </label>
+      </label> */}
 
       <div>
         <FontAwesomeIcon className={style_form.form_icon} icon={faBuilding} />

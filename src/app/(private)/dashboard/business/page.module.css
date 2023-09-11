@@ -8,11 +8,11 @@
   max-width: 25rem;
   width: 100%;
   margin: auto;
-  display: none;
+  /* display: none; */
   animation: on-form 1s linear;
 }
 
-.frm_visible {
+/* .frm_visible {
   display: block;
 }
 
@@ -24,4 +24,4 @@
   to {
     display: block;
   }
-}
+} */
