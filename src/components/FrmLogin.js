@@ -15,7 +15,7 @@ import style_linkB from "@/css/LinkB.module.css"
 //components
 import MyLoading from "./MyLoading"
 
-export default function Login() {
+export default function FrmLogin() {
   const router = useRouter()
 
   //state thaht validate

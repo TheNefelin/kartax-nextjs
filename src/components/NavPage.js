@@ -71,6 +71,7 @@ export default function NavPage() {
         <>
           <Link onClick={burger_reset} href="/dashboard" className={styles.logo}>
             <Image
+              className={styles.img}
               src={session.user.image}
               height={50}
               width={50}

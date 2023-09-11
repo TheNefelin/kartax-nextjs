@@ -2,7 +2,7 @@ import { Suspense } from 'react'
 import styles from './page.module.css'
 
 //componentes
-import CheckIn from '@/components/CheckIn'
+import FrmCheckIn from '@/components/FrmCheckIn'
 import MyLoading from '@/components/MyLoading'
 
 export default function Registrarse() {
@@ -10,7 +10,7 @@ export default function Registrarse() {
     <Suspense fallback={<MyLoading></MyLoading>}>
       <div className={styles.section}>
         <div className={styles.form}>
-          <CheckIn></CheckIn>
+          <FrmCheckIn></FrmCheckIn>
         </div>
       </div>
     </Suspense>

@@ -1,13 +1,13 @@
 import styles from './page.module.css'
 
 //componentes
-import Login from '@/components/Login'
+import FrmLogin from '@/components/FrmLogin'
 
 export default function IniciarSesion() {
   return (
     <section className={styles.section}>
       <div className={styles.form}>
-        <Login ></Login>
+        <FrmLogin ></FrmLogin>
       </div>
     </section>
   )

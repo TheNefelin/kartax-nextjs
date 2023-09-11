@@ -1,11 +1,11 @@
 //components 
 import FrmBussines from "@/components/FrmBusiness"
 import Table from "@/components/Table"
+import Btn from "@/components/Btn"
 //fetching class
 import FetchingApi from "@/context/FetchingApi"
 //css
 import styles from "./page.module.css"
-import style_btn from "@/css/Btn.module.css"
 
 export default async function page() {
   const fetchingApi = new FetchingApi()
@@ -21,13 +21,15 @@ export default async function page() {
   }
 
   const myData = await getData(1)
-
+  
   return (
     <section className={styles.business}>
-      <input className={`${style_btn.btn}`} type="submit" value="&#10010; Nuevo Negocio" />
+      <Btn text="&#10010; Nuevo Negocio"></Btn>
+
       <div className={styles.frm}>
         <FrmBussines></FrmBussines>
       </div>
+      
       <Table tabla={data}></Table>
       <Table tabla={myData[0]}></Table>
       <Table tabla={myData[1]}></Table>

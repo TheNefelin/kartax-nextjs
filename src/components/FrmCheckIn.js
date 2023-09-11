@@ -13,7 +13,7 @@ import style_card from "@/css/Card.module.css"
 import style_btn from "@/css/Btn.module.css"
 import style_linkB from "@/css/LinkB.module.css"
 
-export default function CheckIn() {
+export default function FrmCheckIn() {
   const router = useRouter()
   const fetchingApi = new FetchingApi()
 

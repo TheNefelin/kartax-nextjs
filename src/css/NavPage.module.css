@@ -20,6 +20,10 @@
   animation: colores 10s infinite;
 }
 
+.img {
+  border-radius: 50%;
+}
+
 .burger_visible {
   display: none;
 }
