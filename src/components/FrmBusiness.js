@@ -4,7 +4,7 @@
 import Image from "next/image"
 import { useState } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faBuilding, faLocationDot, faArrowRight, faCamera } from "@fortawesome/free-solid-svg-icons"
+import { faBuilding, faLocationDot, faCamera } from "@fortawesome/free-solid-svg-icons"
 //css
 import style_form from "@/css/Form.module.css"
 import style_card from "@/css/Card.module.css"
@@ -27,8 +27,8 @@ export default function Business() {
   return (
     <form className={`${style_card.card} ${style_form.form}`}>
       <h2>Negocio</h2>
-{/* 
-      <label for="inputTag" className={style_form.img_load}>
+
+      <label className={style_form.img_load}>
         {imagen && <Image
           className={style_form.img}
           src={imagen}
@@ -38,8 +38,8 @@ export default function Business() {
         ></Image>}
         <p>Seleccione un Logo (200 x 200)</p>
         <FontAwesomeIcon className={style_form.form_icon2} icon={faCamera} />
-        <input id="inputTag" onChange={loadImg} type="file" name="img" accept="image/png, image/gif, image/jpeg" />
-      </label> */}
+        <input onChange={loadImg} type="file" name="img" accept="image/png, image/gif, image/jpeg" />
+      </label>
 
       <div>
         <FontAwesomeIcon className={style_form.form_icon} icon={faBuilding} />
