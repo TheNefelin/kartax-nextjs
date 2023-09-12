@@ -1,8 +1,6 @@
 import { getServerSession } from "next-auth/next"
 import { authOptions } from "@/app/api/auth/[...nextauth]/route"
 import { redirect } from "next/navigation"
-//css
-import styles from "./page.module.css"
 //components
 import Home from "@/components/Home"
 

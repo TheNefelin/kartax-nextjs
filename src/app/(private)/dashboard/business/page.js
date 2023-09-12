@@ -22,13 +22,10 @@ export default async function page() {
 
   const myData = await getData(1)
 
-  const fn = () => {
-    console.log("HOLA")
-  }
-  
   return (
     <section className={styles.business}>
-      <Btn clic={fn()} text="&#10010; Nuevo Negocio"></Btn>
+      <h1>Negocio</h1> 
+      <Btn text="&#10010; Nuevo Negocio"></Btn>
 
       <div className={styles.frm}>
         <FrmBussines></FrmBussines>
