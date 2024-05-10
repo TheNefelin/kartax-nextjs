@@ -1,6 +1,6 @@
 export default class FetchingApi {
   constructor() { 
-    this._api = "https://kartax-api-py.vercel.app" //api url
+    this._api = process.env.API_URL //api url
   }
   //root
   async get_root() {return await fnFetching(`${this._api}/`, get_public())}
